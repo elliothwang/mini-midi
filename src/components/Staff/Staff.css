@@ -1,0 +1,17 @@
+.staffContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5vmin 0;
+}
+
+.staff {
+  height: 40vmin;
+  width: 140vmin;
+  border: 1px solid black;
+}
+
+.line {
+  height: 10vmin;
+  border-bottom: 1px solid black;
+}
