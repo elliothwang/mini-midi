@@ -1,20 +1,31 @@
-export default function keyClick(key) {
-  // if keyCode= " ", invoke handleClick correctly
-  if (
-    key === 65 ||
-    key === 87 ||
-    key === 83 ||
-    key === 69 ||
-    key === 68 ||
-    key === 70 ||
-    key === 84 ||
-    key === 71 ||
-    key === 89 ||
-    key === 72 ||
-    key === 85 ||
-    key === 74
-  ) {
-    console.log("valid key has been pressed");
+import playkeyCode from "../../utilities/playkeyCode";
+
+export default function keyClick(keyCode) {
+  if (keyCode === 65) {
+    playkeyCode("C");
+    // "press down" key on page
+  } else if (keyCode === 87) {
+    playkeyCode("C#");
+  } else if (keyCode === 83) {
+    playkeyCode("D");
+  } else if (keyCode === 69) {
+    playkeyCode("D#");
+  } else if (keyCode === 68) {
+    playkeyCode("E");
+  } else if (keyCode === 70) {
+    playkeyCode("F");
+  } else if (keyCode === 84) {
+    playkeyCode("F#");
+  } else if (keyCode === 71) {
+    playkeyCode("G");
+  } else if (keyCode === 89) {
+    playkeyCode("G#");
+  } else if (keyCode === 72) {
+    playkeyCode("A");
+  } else if (keyCode === 85) {
+    playkeyCode("A#");
+  } else if (keyCode === 74) {
+    playkeyCode("B");
   }
   // "press down" key on page
   // document.querySelectorAll('.a').click();
