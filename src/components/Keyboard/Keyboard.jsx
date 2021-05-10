@@ -4,9 +4,20 @@ import { useState } from "react";
 export default function Keyboard({ notes, setNotes }) {
   const [note, setNote] = useState("");
 
+  // play note & store note in state function
+  function handlePianoClick(evt) {
+    console.log(evt.target);
+    setNote(evt.target.value);
+    // use created properties using values
+    // setNotes();
+  }
+
   return (
-    <div
+    <div className="keyboardContainer">
+      <div
         className="keyboard"
+        // onKeyDown={handleKeyDown}
+        onClick={handlePianoClick}
       >
         <button className="key white c" value="C">
           A
@@ -45,5 +56,6 @@ export default function Keyboard({ notes, setNotes }) {
           J
         </button>
       </div>
+    </div>
   );
 }
