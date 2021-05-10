@@ -8,33 +8,48 @@ export default function Keyboard({ notes, setNotes }) {
   function handlePianoClick(evt) {
     console.log(evt.target);
     setNote(evt.target.value);
-    // use created properties using values
-    // setNotes();
   }
 
+  // play note if valid keyboard key clicked
   function handleKeyDown(evt) {
-    // if keyCode= " ", invoke handleClick correctly
-    if (
-      evt.keyCode === 65 ||
-      evt.keyCode === 87 ||
-      evt.keyCode === 83 ||
-      evt.keyCode === 69 ||
-      evt.keyCode === 68 ||
-      evt.keyCode === 70 ||
-      evt.keyCode === 84 ||
-      evt.keyCode === 71 ||
-      evt.keyCode === 89 ||
-      evt.keyCode === 72 ||
-      evt.keyCode === 85 ||
-      evt.keyCode === 74
-    ) {
-      console.log(evt.key);
+    let convertedNote = evt.keyCode;
+    if (convertedNote === 65) {
+      setNote("C");
+      // document.querySelector('.c').click();
+    } else if (convertedNote === 87) {
+      setNote("C#");
+    } else if (convertedNote === 83) {
+      setNote("D");
+    } else if (convertedNote === 69) {
+      setNote("D#");
+    } else if (convertedNote === 68) {
+      setNote("E");
+    } else if (convertedNote === 70) {
+      setNote("F");
+    } else if (convertedNote === 84) {
+      setNote("F#");
+    } else if (convertedNote === 71) {
+      setNote("G");
+    } else if (convertedNote === 89) {
+      setNote("G#");
+    } else if (convertedNote === 72) {
+      setNote("A");
+    } else if (convertedNote === 85) {
+      setNote("A#");
+    } else if (convertedNote === 74) {
+      setNote("B");
     }
+    // "press down" key on page
   }
 
-    // capture keypress at the window/body level because non-input elements don't have an input focus
-    window.addEventListener("keydown", handleKeyDown);
-    // window.addEventListener("keyup", handleKeyUp);
+  // function handleKeyUp(evt) {
+  // setNotes with clicked note
+  // what happens if note is held?
+  // }
+
+  // capture keypress at the window/body level because non-input elements don't have an input focus
+  window.addEventListener("keydown", handleKeyDown);
+  // window.addEventListener("keyup", handleKeyUp);
 
   return (
     <div className="keyboardContainer">
