@@ -68,7 +68,11 @@
 .e,
 .g,
 .black {
-  margin: 0 0 0 -6.3vmin;
+  margin: 0 0 0 -6.1vmin;
+}
+
+.c {
+  margin: 0 0 3vmin 0;
 }
 
 .f {
