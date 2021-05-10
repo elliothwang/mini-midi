@@ -26,6 +26,7 @@
 .white {
   height: 80vmin;
   width: 20vmin;
+  color: black;
   z-index: 1;
   border: 1px solid #aaaaaa;
   border-radius: 0 0 3vmin 3vmin;
