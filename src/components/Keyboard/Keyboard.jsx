@@ -1,5 +1,6 @@
 import "./Keyboard.css";
 import { useState } from "react";
+import playNote from "../../utilities/playNote";
 
 export default function Keyboard({ notes, setNotes }) {
   const [note, setNote] = useState("");
@@ -8,6 +9,7 @@ export default function Keyboard({ notes, setNotes }) {
   function handlePianoClick(evt) {
     console.log(evt.target);
     setNote(evt.target.value);
+    playNote(evt.target.value);
   }
 
   // play note if valid keyboard key clicked
@@ -15,31 +17,42 @@ export default function Keyboard({ notes, setNotes }) {
     let convertedNote = evt.keyCode;
     if (convertedNote === 65) {
       setNote("C");
-      // document.querySelector('.c').click();
+      playNote("C");
+      // "press down" key on page
     } else if (convertedNote === 87) {
       setNote("C#");
+      playNote("C#");
     } else if (convertedNote === 83) {
       setNote("D");
+      playNote("D");
     } else if (convertedNote === 69) {
       setNote("D#");
+      playNote("D#");
     } else if (convertedNote === 68) {
       setNote("E");
+      playNote("E");
     } else if (convertedNote === 70) {
       setNote("F");
+      playNote("F");
     } else if (convertedNote === 84) {
       setNote("F#");
+      playNote("F#");
     } else if (convertedNote === 71) {
       setNote("G");
+      playNote("G");
     } else if (convertedNote === 89) {
       setNote("G#");
+      playNote("G#");
     } else if (convertedNote === 72) {
       setNote("A");
+      playNote("A");
     } else if (convertedNote === 85) {
       setNote("A#");
+      playNote("A#");
     } else if (convertedNote === 74) {
       setNote("B");
+      playNote("B");
     }
-    // "press down" key on page
   }
 
   // function handleKeyUp(evt) {
