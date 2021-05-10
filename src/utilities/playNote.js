@@ -2,6 +2,7 @@ export default function playNote(note) {
 
   const player = new Audio();
   if (note === "C") {
+    console.log('this is a C');
     <audio src="C.mp3"></audio>;
   } else if (note === "C#") {
     <audio src="C#.mp3"></audio>;

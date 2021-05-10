@@ -1,7 +1,7 @@
 import "./Keyboard.css";
 import { useState } from "react";
 import playNote from "../../utilities/playNote";
-// import keyClick from "../../utilities/keyClick";
+import keyClick from "../../utilities/keyClick";
 
 export default function Keyboard({ notes, setNotes }) {
   const [note, setNote] = useState("");
@@ -16,7 +16,7 @@ export default function Keyboard({ notes, setNotes }) {
   // play note if valid keyboard key clicked
   function handleKeyDown(evt) {
     let keyCode = evt.keyCode;
-    // keyClick(keyCode);
+    keyClick(keyCode);
   }
 
   // function handleKeyUp(evt) {

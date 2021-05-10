@@ -1,31 +1,31 @@
-import playkeyCode from "../../utilities/playkeyCode";
+import playNote from "../utilities/playNote";
 
 export default function keyClick(keyCode) {
   if (keyCode === 65) {
-    playkeyCode("C");
+    playNote("C");
     // "press down" key on page
   } else if (keyCode === 87) {
-    playkeyCode("C#");
+    playNote("C#");
   } else if (keyCode === 83) {
-    playkeyCode("D");
+    playNote("D");
   } else if (keyCode === 69) {
-    playkeyCode("D#");
+    playNote("D#");
   } else if (keyCode === 68) {
-    playkeyCode("E");
+    playNote("E");
   } else if (keyCode === 70) {
-    playkeyCode("F");
+    playNote("F");
   } else if (keyCode === 84) {
-    playkeyCode("F#");
+    playNote("F#");
   } else if (keyCode === 71) {
-    playkeyCode("G");
+    playNote("G");
   } else if (keyCode === 89) {
-    playkeyCode("G#");
+    playNote("G#");
   } else if (keyCode === 72) {
-    playkeyCode("A");
+    playNote("A");
   } else if (keyCode === 85) {
-    playkeyCode("A#");
+    playNote("A#");
   } else if (keyCode === 74) {
-    playkeyCode("B");
+    playNote("B");
   }
   // "press down" key on page
   // document.querySelectorAll('.a').click();

@@ -16,11 +16,11 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
-            <Route path="/">
-              <MainPage />
-            </Route>
             <Route path="/songs">
               <MySongsPage />
+            </Route>
+            <Route path="/">
+              <MainPage />
             </Route>
             <Redirect to="/" />
           </Switch>
