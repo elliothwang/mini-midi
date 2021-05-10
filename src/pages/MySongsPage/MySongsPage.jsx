@@ -1,7 +1,7 @@
 export default function MySongsPage () {
   return (
     <div className="mySongsPage">
-      <div>My Songs Page!</div>
+      <h1>My Songs Page!</h1>
     </div>
   )
 }
