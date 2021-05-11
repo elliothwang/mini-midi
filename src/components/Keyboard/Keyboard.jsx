@@ -2,8 +2,7 @@ import "./Keyboard.css";
 import { useState, useEffect } from "react";
 import playNote from "../../utilities/playNote";
 
-export default function Keyboard({ notes, setNotes }) {
-  const [note, setNote] = useState("");
+export default function Keyboard({ note, setNote, notes, setNotes }) {
 
   // play note & store note in state function
   function handlePianoClick(evt) {
@@ -68,7 +67,6 @@ export default function Keyboard({ notes, setNotes }) {
 
   return (
     <div className="keyboardContainer">
-      <h1>Note: { note }</h1>
       <div
         className="keyboard"
         onClick={handlePianoClick}

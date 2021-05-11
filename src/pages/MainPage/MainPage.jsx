@@ -5,13 +5,14 @@ import Metronome from "../../components/Metronome/Metronome";
 
 export default function MainPage () {
   const [notes, setNotes] = useState([]);
+  const [note, setNote] = useState("");
 
   return (
     <div className="mainPage">
       <h1>Main Page!</h1>
       <Metronome />
-      <Staff notes={notes} />
-      <Keyboard notes={notes} setNotes={setNotes} />
+      <Staff notes={notes} note={note} />
+      <Keyboard note={note} setNote={setNote} notes={notes} setNotes={setNotes} />
     </div>
   )
 }

@@ -1,13 +1,16 @@
 import "./Staff.css";
 
-export default function Keyboard() {
+export default function Keyboard({ note }) {
   return (
-    <div className="staffContainer">
-      {/* <img src="https://toppng.com/uploads/preview/treble-clef-11552767864mvdst1kg5w.png" alt="treble clef" height="220vmin" className="trebleClefImg" /> */}
-      <div className="staff">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+    <div className="mainContainer">
+      <h1 className="noteTracker">Note: { note }</h1>
+      <div className="staffContainer">
+        {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}
+        <div className="staff">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </div>
     </div>
   );

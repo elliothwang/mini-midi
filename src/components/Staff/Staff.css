@@ -1,14 +1,35 @@
 .staffContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 0 5vmin 0;
+  margin: 24vmin 0 5vmin 0;
+}
+
+.trebleClefImgContainer {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 -40.1vmin -3.2vmin;
+  mix-blend-mode: multiply;
+}
+
+.trebleClefImg {
+  height: 75vmin;
+  width: 27vmin;
+  background-image: url('https://toppng.com/uploads/preview/treble-clef-11552767864mvdst1kg5w.png');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
 }
 
 .staff {
   height: 40vmin;
   width: 140vmin;
   border: 1px solid black;
+  margin: -20vmin 0 0 0;
 }
 
 .line {
