@@ -1,0 +1,14 @@
+.metronome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 3vmin 0;
+}
+
+.metronome > div {
+  color: black;
+}
+
+.metronome > button {
+  color: white;
+}

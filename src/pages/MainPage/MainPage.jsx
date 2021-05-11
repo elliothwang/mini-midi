@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Staff from "../../components/Staff/Staff";
 import Keyboard from "../../components/Keyboard/Keyboard";
+import Metronome from "../../components/Metronome/Metronome";
 
 export default function MainPage () {
   const [notes, setNotes] = useState([]);
@@ -8,7 +9,8 @@ export default function MainPage () {
   return (
     <div className="mainPage">
       <h1>Main Page!</h1>
-      <Staff />
+      <Metronome />
+      <Staff notes={notes} />
       <Keyboard notes={notes} setNotes={setNotes} />
     </div>
   )

@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.keyboardContainer > h1 {
+  margin: -1vmin 0 3vmin 0;
+}
+
 .keyboard {
   display: flex;
   justify-content: center;
