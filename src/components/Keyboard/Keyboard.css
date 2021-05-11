@@ -91,6 +91,10 @@
     width: 98vmin;
   }
 
+  .key {
+    font-size: 4vmin;
+  }
+
   .white {
     height: 50vmin;
     width: 14vmin;
