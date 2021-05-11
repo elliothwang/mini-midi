@@ -6,6 +6,18 @@
   margin: 24vmin 0 5vmin 0;
 }
 
+.contentBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 -4vmin 0;
+}
+
+.noteTracker {
+  font-size: 4vmin;
+  margin: -3.2vmin 0 0 3vmin;
+}
+
 .trebleClefImgContainer {
   width: 90%;
   display: flex;

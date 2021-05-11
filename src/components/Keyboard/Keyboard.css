@@ -100,15 +100,6 @@
     width: 14vmin;
   }
   
-  .white:active {
-    border-top: 1px solid #777;
-    border-left: 1px solid #999;
-    border-bottom: 1px solid #999;
-    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset,
-      -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
-  }
-  
   .black {
     height: 30vmin;
     width: 12vmin;
