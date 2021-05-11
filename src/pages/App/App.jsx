@@ -9,24 +9,25 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [userSongs, setUserSongs] = useState([]);
   
   return (
     <main className="App">
       { user ? 
         <>
-          <NavBar user={user} setUser={setUser} />
+          <NavBar user={ user } setUser={ setUser } />
           <Switch>
             <Route path="/songs">
-              <MySongsPage />
+              <MySongsPage userSongs={ userSongs } setUserSongs = { setUserSongs }/>
             </Route>
             <Route path="/">
-              <MainPage />
+              <MainPage userSong={ userSongs }/>
             </Route>
             <Redirect to="/" />
           </Switch>
         </>
         :
-        <AuthPage setUser={setUser} />
+        <AuthPage setUser={ setUser } />
       }
     </main>
   );

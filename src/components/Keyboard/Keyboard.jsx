@@ -1,7 +1,8 @@
 import "./Keyboard.css";
+import { useState } from "react";
 import playNote from "../../utilities/playNote";
 
-export default function Keyboard({ note, setNote, song, setSong }) {
+export default function Keyboard({ setNote, song, setSong }) {
 
   function handlePianoClick(evt) {
     playNote(evt.target.value);
@@ -141,7 +142,6 @@ export default function Keyboard({ note, setNote, song, setSong }) {
       <div
         className="keyboard"
         onClick={handlePianoClick}
-
       >
         <button className="key white C" value="C">
           A
