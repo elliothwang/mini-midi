@@ -90,18 +90,32 @@
     height: 50vmin;
     width: 98vmin;
   }
-  
-  .key {
-    padding: 0 0 5vmin 0;
-  }
-  
+
   .white {
     height: 50vmin;
     width: 14vmin;
+    border-radius: 0 0 2vmin 2vmin;
   }
   
   .black {
     height: 30vmin;
-    width: 12vmin;
+    width: 9.5vmin;
+  }
+
+  .a,
+  .b,
+  .d,
+  .e,
+  .g,
+  .black {
+    margin: 0 0 0 -4.8vmin;
+  }
+
+  .c {
+    margin: 0 0 3vmin 0;
+  }
+
+  .f {
+    margin: 0 0 0 -0.2vmin;
   }
 }
