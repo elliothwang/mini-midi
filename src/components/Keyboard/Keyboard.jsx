@@ -38,13 +38,13 @@ export default function Keyboard({ notes, setNotes }) {
         <button className="key white c" value="C">
           A
         </button>
-        <button className="key black cSharp" value="C#">
+        <button className="key black cSharp" value="CSharp">
           W
         </button>
         <button className="key white d" value="D">
           S
         </button>
-        <button className="key black dSharp" value="D#">
+        <button className="key black dSharp" value="DSharp">
           E
         </button>
         <button className="key white e" value="E">
@@ -53,19 +53,19 @@ export default function Keyboard({ notes, setNotes }) {
         <button className="key white f" value="F">
           F
         </button>
-        <button className="key black fSharp" value="F#">
+        <button className="key black fSharp" value="FSharp">
           T
         </button>
         <button className="key white g" value="G">
           G
         </button>
-        <button className="key black gSharp" value="G#">
+        <button className="key black gSharp" value="GSharp">
           Y
         </button>
         <button className="key white a" value="A">
           H
         </button>
-        <button className="key black aSharp" value="A#">
+        <button className="key black aSharp" value="ASharp">
           U
         </button>
         <button className="key white b" value="B">
