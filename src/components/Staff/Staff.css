@@ -27,7 +27,7 @@
 
 .staff {
   height: 40vmin;
-  width: 140vmin;
+  width: 138vmin;
   border: 1px solid black;
   margin: -20vmin 0 0 0;
 }
@@ -35,4 +35,15 @@
 .line {
   height: 10vmin;
   border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 1350px) {
+  .staff {
+    height: 30vmin;
+    width: 98vmin;
+  }
+  .line {
+    height: 7.5vmin;
+    border-bottom: 1px solid black;
+  }
 }
