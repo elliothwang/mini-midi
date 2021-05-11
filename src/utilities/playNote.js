@@ -1,30 +1,41 @@
-export default function playNote(note) {
+import A from '../assets/Notes/A.mp3';
+import ASharp from '../assets/Notes/A#.mp3';
+import B from '../assets/Notes/B.mp3';
+import C from '../assets/Notes/C.mp3';
+import CSharp from '../assets/Notes/C#.mp3';
+import D from '../assets/Notes/D.mp3';
+import DSharp from '../assets/Notes/D#.mp3';
+import E from '../assets/Notes/E.mp3';
+import F from '../assets/Notes/F.mp3';
+import FSharp from '../assets/Notes/F#.mp3';
+import G from '../assets/Notes/G.mp3';
+import GSharp from '../assets/Notes/G#.mp3';
 
-  const player = new Audio();
+export default function playNote(note) {
+  // new Audio(`../assets/Notes/${note}.mp3`).play();
   if (note === "C") {
-    console.log('this is a C');
-    <audio src="C.mp3"></audio>;
+    new Audio(C).play();
   } else if (note === "C#") {
-    <audio src="C#.mp3"></audio>;
+    new Audio(CSharp).play();
   } else if (note === "D") {
-    <audio src="D.mp3"></audio>;
+    new Audio(D).play();
   } else if (note === "D#") {
-    <audio src=".mp3"></audio>;
+    new Audio(DSharp).play();
   } else if (note === "E") {
-    <audio src=".mp3"></audio>;
+    new Audio(E).play();
   } else if (note === "F") {
-    <audio src=".mp3"></audio>;
+    new Audio(F).play();
   } else if (note === "F#") {
-    <audio src=".mp3"></audio>;
+    new Audio(FSharp).play();
   } else if (note === "G") {
-    <audio src=".mp3"></audio>;
+    new Audio(G).play();
   } else if (note === "G#") {
-    <audio src=".mp3"></audio>;
+    new Audio(GSharp).play();
   } else if (note === "A") {
-    <audio src=".mp3"></audio>;
+    new Audio(A).play();
   } else if (note === "A#") {
-    <audio src=".mp3"></audio>;
+    new Audio(ASharp).play();
   } else if (note === "B") {
-    <audio src=".mp3"></audio>;
+    new Audio(B).play();
   }
 }

@@ -3,7 +3,7 @@ import playNote from "../utilities/playNote";
 export default function keyClick(keyCode) {
   if (keyCode === 65) {
     playNote("C");
-    // "press down" key on page
+    // "depress" key on page
   } else if (keyCode === 87) {
     playNote("C#");
   } else if (keyCode === 83) {
@@ -27,6 +27,4 @@ export default function keyClick(keyCode) {
   } else if (keyCode === 74) {
     playNote("B");
   }
-  // "press down" key on page
-  // document.querySelectorAll('.a').click();
 }
