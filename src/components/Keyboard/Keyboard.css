@@ -1,5 +1,6 @@
 .keyboardContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -76,6 +77,6 @@
 }
 
 .f {
-  margin: 0 0 0 -0.1vmin;
+  margin: 0 0 0 -0.2vmin;
 }
 

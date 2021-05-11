@@ -1,14 +1,12 @@
 import "./Keyboard.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import playNote from "../../utilities/playNote";
-import keyClick from "../../utilities/keyClick";
 
 export default function Keyboard({ notes, setNotes }) {
   const [note, setNote] = useState("");
 
   // play note & store note in state function
   function handlePianoClick(evt) {
-    console.log(evt.target);
     setNote(evt.target.value);
     playNote(evt.target.value);
   }
@@ -16,23 +14,63 @@ export default function Keyboard({ notes, setNotes }) {
   // play note if valid keyboard key clicked
   function handleKeyDown(evt) {
     let keyCode = evt.keyCode;
-    keyClick(keyCode);
+    if (keyCode === 65) {
+      playNote("C");
+      setNote("C");
+      // "depress" key on page
+    } else if (keyCode === 87) {
+      playNote("CSharp");
+      setNote("CSharp");
+    } else if (keyCode === 83) {
+      playNote("D");
+      setNote("D");
+    } else if (keyCode === 69) {
+      playNote("DSharp");
+      setNote("DSharp");
+    } else if (keyCode === 68) {
+      playNote("E");
+      setNote("E");
+    } else if (keyCode === 70) {
+      playNote("F");
+      setNote("F");
+    } else if (keyCode === 84) {
+      playNote("FSharp");
+      setNote("FSharp");
+    } else if (keyCode === 71) {
+      playNote("G");
+      setNote("G");
+    } else if (keyCode === 89) {
+      playNote("GSharp");
+      setNote("GSharp");
+    } else if (keyCode === 72) {
+      playNote("A");
+      setNote("A");
+    } else if (keyCode === 85) {
+      playNote("ASharp");
+      setNote("ASharp");
+    } else if (keyCode === 74) {
+      playNote("B");
+      setNote("B");
+    }
   }
 
   // function handleKeyUp(evt) {
-  // setNotes with clicked note
-  // what happens if note is held?
+    // setNotes with clicked note
+    // what happens if note is held?
   // }
 
-  // capture keypress at the window/body level because non-input elements don't have an input focus
-  window.addEventListener("keydown", handleKeyDown);
-  // window.addEventListener("keyup", handleKeyUp);
+  // limit event listener to the component's mount
+  useEffect(() => {
+    // capture keypress at the window/body level because non-input elements don't have an input focus
+    window.addEventListener("keydown", handleKeyDown);
+    // window.addEventListener("keyup", handleKeyUp);
+  }, [])
 
   return (
     <div className="keyboardContainer">
+      <h1>Note: { note }</h1>
       <div
         className="keyboard"
-        // onKeyDown={handleKeyDown}
         onClick={handlePianoClick}
       >
         <button className="key white c" value="C">
