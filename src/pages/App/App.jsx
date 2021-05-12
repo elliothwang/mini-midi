@@ -11,7 +11,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   // seeding userSongs to work on MySongsPage
   const [userSongs, setUserSongs] = useState([
-    ["C", "F", "E", "D", "F", "DSharp", "D"],
+    // ["C", "F", "E", "D", "F", "DSharp", "D"],
   ]);
 
   return (

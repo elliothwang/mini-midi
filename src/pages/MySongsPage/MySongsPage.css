@@ -1,3 +1,14 @@
-.mySongsPage {
-  color: red;
+.mySongsContainer {
+  display: flex;
+}
+
+.songLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songNotes {
+  display: flex;
+  flex-direction: row;
 }
