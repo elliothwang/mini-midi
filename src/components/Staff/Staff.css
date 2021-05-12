@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 24vmin 0 5vmin 0;
+  margin: 5vmin 0 5vmin 0;
 }
 
-.trebleClefImgContainer {
+/* .trebleClefImgContainer {
   width: 90%;
   display: flex;
   justify-content: flex-start;
@@ -23,6 +23,32 @@
   background-size: cover;
   background-position: center;
   mix-blend-mode: multiply;
+} */
+
+.songTracker {
+  font-size: 3vmin;
+  margin: 0 0 1vmin 0;
+}
+
+.staff {
+  display: grid;
+  grid-template-areas: "ENoteContainer"
+                       "DNoteContainer"
+                       "CNoteContainer"
+                       "BNoteContainer"
+                       "ANoteContainer"
+                       "GNoteContainer"
+                       "FNoteContainer";
+  height: 42vmin;
+  width: 138vmin;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+.staff > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .staffLines {
@@ -41,29 +67,6 @@
   width: 138vmin;
   border-bottom: 0.01vmin solid black;
   z-index: 1;
-}
-
-.staff {
-  display: grid;
-  grid-template-areas: "ENoteContainer"
-                       "DNoteContainer"
-                       "CNoteContainer"
-                       "BNoteContainer"
-                       "ANoteContainer"
-                       "GNoteContainer"
-                       "FNoteContainer";
-
-  height: 42vmin;
-  width: 138vmin;
-  border: 1px solid black;
-  margin: -20vmin 0 0 0;
-  z-index: 2;
-}
-
-.staff > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .ENoteContainer {
@@ -115,6 +118,11 @@
 
 
 @media only screen and (max-width: 1350px) {
+  .staff {
+    height: 28vmin;
+    width: 97vmin;
+  }
+
   .staffLines {
     display: flex;
     flex-direction: column;
@@ -131,10 +139,6 @@
     width: 97vmin;
   }
 
-  .staff {
-    height: 28vmin;
-    width: 97vmin;
-  }
 
   .ENoteContainer {
     grid-area: ENoteContainer;
@@ -170,4 +174,5 @@
     grid-area: FNoteContainer;
     height: 4vmin;
   }
+
 }
