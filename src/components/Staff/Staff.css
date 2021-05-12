@@ -26,24 +26,22 @@
 }
 
 .staff {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   height: 40vmin;
   width: 138vmin;
   border: 1px solid black;
   margin: -20vmin 0 0 0;
 }
 
-.line {
-  height: 10vmin;
-  border-bottom: 1px solid black;
+.offsetLeft {
+  margin: -1.5vmin 0 0 -2vmin;
 }
 
 @media only screen and (max-width: 1350px) {
   .staff {
     height: 30vmin;
     width: 97vmin;
-  }
-  .line {
-    height: 7.5vmin;
-    border-bottom: 1px solid black;
   }
 }
