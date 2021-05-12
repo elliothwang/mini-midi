@@ -2,14 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50% auto;
   margin: 0 0 -4vmin 0;
 }
 
 .record {
+  font-size: 5vmin;
   background-color: red;
+  margin: 0 5vmin 0 0;
+}
+
+.metronome > * {
+  font-size: 5vmin;
+  margin: 0 0 -6vmin 0;
 }
 
 .noteTracker {
-  font-size: 4vmin;
-  margin: -3.2vmin 0 0 3vmin;
+  font-size: 5vmin;
+  margin: 0 0 0 5vmin;
 }

@@ -9,8 +9,11 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [userSongs, setUserSongs] = useState([]);
-  
+  // seeding userSongs to work on MySongsPage
+  const [userSongs, setUserSongs] = useState([
+    ["C", "F", "E", "D", "F", "DSharp", "D"],
+  ]);
+
   return (
     <main className="App">
       { user ? 
@@ -18,10 +21,13 @@ export default function App() {
           <NavBar user={ user } setUser={ setUser } />
           <Switch>
             <Route path="/songs">
-              <MySongsPage userSongs={ userSongs } setUserSongs = { setUserSongs }/>
+              <MySongsPage userSongs={ userSongs }/>
             </Route>
             <Route path="/">
-              <MainPage userSong={ userSongs }/>
+              <MainPage 
+                userSongs={ userSongs } 
+                setUserSongs = { setUserSongs } 
+              />
             </Route>
             <Redirect to="/" />
           </Switch>

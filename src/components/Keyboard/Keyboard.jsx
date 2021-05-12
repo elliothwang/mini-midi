@@ -1,5 +1,4 @@
 import "./Keyboard.css";
-import { useState } from "react";
 import playNote from "../../utilities/playNote";
 
 export default function Keyboard({ setNote, song, setSong }) {
