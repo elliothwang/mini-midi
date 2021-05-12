@@ -9,13 +9,32 @@ export default function Keyboard({ note, song }) {
       {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}
       <div className="songTracker">Song: { song }</div>
       <div className="staff">
-        <div className="ENoteContainer"><Sharp /></div>
-        <div className="DNoteContainer offsetLeft"><DownwardsQuarterNote /></div>
-        <div className="CNoteContainer"><DownwardsQuarterNote /></div>
-        <div className="BNoteContainer offsetLeft"><DownwardsQuarterNote /></div>
-        <div className="ANoteContainer"><UpwardsQuarterNote /></div>
-        <div className="GNoteContainer offsetLeft"><UpwardsQuarterNote /></div>
-        <div className="FNoteContainer"><UpwardsQuarterNote /></div>
+        <div className="ENoteContainer">
+          <div className={ note === "E" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+        </div>
+        <div className="DNoteContainer offsetLeft">
+          <div className={ note === "D" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "DSharp" ? "played" : "notPlayed" }><Sharp /></div>
+        </div>
+        <div className="CNoteContainer">
+          <div className={ note === "C" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "CSharp" ? "played" : "notPlayed" }><Sharp /></div>
+        </div>
+        <div className="BNoteContainer offsetLeft">
+          <div className={ note === "B" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+        </div>
+        <div className="ANoteContainer">
+          <div className={ note === "A" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
+          <div className={ note === "ASharp" ? "played" : "notPlayed" }><Sharp /></div>
+        </div>
+        <div className="GNoteContainer offsetLeft">
+          <div className={ note === "G" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
+          <div className={ note === "GSharp" ? "played" : "notPlayed" }><Sharp /></div>
+        </div>
+        <div className="FNoteContainer">
+          <div className={ note === "F" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
+          <div className={ note === "FSharp" ? "played" : "notPlayed" }><Sharp /></div>
+        </div>
       </div>
     </div>
   );

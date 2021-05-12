@@ -42,62 +42,59 @@
 }
 
 .staff > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: 0.1px solid black;
 }
 
 .ENoteContainer {
   grid-area: ENoteContainer;
   height: 6vmin;
-  /* background-color: red; */
 }
 
 .DNoteContainer {
   grid-area: DNoteContainer;
   height: 6vmin;
-  /* background-color: green; */
 }
 
 .CNoteContainer {
   grid-area: CNoteContainer;
   height: 6vmin;
-  /* background-color: yellow; */
 }
 
 .BNoteContainer {
   grid-area: BNoteContainer;
   height: 6vmin;
-  /* background-color: lightblue; */
 }
 
 .ANoteContainer {
   grid-area: ANoteContainer;
   height: 6vmin;
-  /* background-color: white; */
 }
 
 .GNoteContainer {
   grid-area: GNoteContainer;
   height: 6vmin;
-  /* background-color: orange; */
 }
 
 .FNoteContainer {
   grid-area: FNoteContainer;
   height: 6vmin;
-  /* background-color: purple; */
 }
 
 .offsetLeft {
   margin: 0 0 0 -2vmin;
 }
 
+.played {
+  display: block;
+}
+
 .notPlayed {
   display: none;
 }
 
-.played {
-  display: block;
-}
 
 @media only screen and (max-width: 1350px) {
   .staff {
@@ -108,42 +105,35 @@
   .ENoteContainer {
     grid-area: ENoteContainer;
     height: 4vmin;
-    /* background-color: red; */
   }
   
   .DNoteContainer {
     grid-area: DNoteContainer;
     height: 4vmin;
-    /* background-color: green; */
   }
   
   .CNoteContainer {
     grid-area: CNoteContainer;
     height: 4vmin;
-    /* background-color: yellow; */
   }
   
   .BNoteContainer {
     grid-area: BNoteContainer;
     height: 4vmin;
-    /* background-color: lightblue; */
   }
   
   .ANoteContainer {
     grid-area: ANoteContainer;
     height: 4vmin;
-    /* background-color: white; */
   }
   
   .GNoteContainer {
     grid-area: GNoteContainer;
     height: 4vmin;
-    /* background-color: orange; */
   }
   
   .FNoteContainer {
     grid-area: FNoteContainer;
     height: 4vmin;
-    /* background-color: purple; */
   }
 }
