@@ -12,6 +12,13 @@
   margin: 0 5vmin 0 0;
 }
 
+.metronome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 6vmin 0;
+}
+
 .metronome > * {
   font-size: 5vmin;
   margin: 0 0 -6vmin 0;

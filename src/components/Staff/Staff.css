@@ -28,15 +28,44 @@
 .staff {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   height: 40vmin;
   width: 138vmin;
   border: 1px solid black;
   margin: -20vmin 0 0 0;
 }
 
+.ENoteImg {
+  grid-column: 0/1;
+}
+
+.DNoteImg {
+  grid-column: 1/2;
+}
+
+.CNoteImg {
+  grid-column: 2/3;
+}
+
+.BNoteImg {
+  grid-column: 3/4;
+}
+
+.ANoteImg {
+  grid-column: 4/5;
+}
+
+.GNoteImg {
+  grid-column: 5/6;
+}
+
+.FNoteImg {
+  grid-column: 6/7;
+}
+
+
 .offsetLeft {
-  margin: -1.5vmin 0 0 -2vmin;
+  margin: 0 0 0 -2vmin;
 }
 
 @media only screen and (max-width: 1350px) {
