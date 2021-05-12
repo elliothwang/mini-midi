@@ -9,16 +9,13 @@ export default function Keyboard({ note, song }) {
       {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}
       <div className="songTracker">Song: { song }</div>
       <div className="staff">
-        <div className="staffColumn">
-          <div className="ENoteImg"><Sharp /></div>
-          <div className="DNoteImg offsetLeft"><DownwardsQuarterNote /></div>
-          <div className="CNoteImg"><DownwardsQuarterNote /></div>
-          <div className="BNoteImg offsetLeft"><DownwardsQuarterNote /></div>
-          <div className="ANoteImg"><UpwardsQuarterNote /></div>
-          <div className="GNoteImg offsetLeft"><UpwardsQuarterNote /></div>
-          <div className="FNoteImg"><UpwardsQuarterNote /></div>
-        </div>
-        
+        <div className="ENoteContainer"><Sharp /></div>
+        <div className="DNoteContainer offsetLeft"><DownwardsQuarterNote /></div>
+        <div className="CNoteContainer"><DownwardsQuarterNote /></div>
+        <div className="BNoteContainer offsetLeft"><DownwardsQuarterNote /></div>
+        <div className="ANoteContainer"><UpwardsQuarterNote /></div>
+        <div className="GNoteContainer offsetLeft"><UpwardsQuarterNote /></div>
+        <div className="FNoteContainer"><UpwardsQuarterNote /></div>
       </div>
     </div>
   );

@@ -27,50 +27,123 @@
 
 .staff {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  height: 40vmin;
+  grid-template-areas: "ENoteContainer"
+                       "DNoteContainer"
+                       "CNoteContainer"
+                       "BNoteContainer"
+                       "ANoteContainer"
+                       "GNoteContainer"
+                       "FNoteContainer";
+
+  height: 42vmin;
   width: 138vmin;
   border: 1px solid black;
   margin: -20vmin 0 0 0;
 }
 
-.ENoteImg {
-  grid-column: 0/1;
+.staff > div {
+  border-bottom: 0.1px solid black;
 }
 
-.DNoteImg {
-  grid-column: 1/2;
+.ENoteContainer {
+  grid-area: ENoteContainer;
+  height: 6vmin;
+  /* background-color: red; */
 }
 
-.CNoteImg {
-  grid-column: 2/3;
+.DNoteContainer {
+  grid-area: DNoteContainer;
+  height: 6vmin;
+  /* background-color: green; */
 }
 
-.BNoteImg {
-  grid-column: 3/4;
+.CNoteContainer {
+  grid-area: CNoteContainer;
+  height: 6vmin;
+  /* background-color: yellow; */
 }
 
-.ANoteImg {
-  grid-column: 4/5;
+.BNoteContainer {
+  grid-area: BNoteContainer;
+  height: 6vmin;
+  /* background-color: lightblue; */
 }
 
-.GNoteImg {
-  grid-column: 5/6;
+.ANoteContainer {
+  grid-area: ANoteContainer;
+  height: 6vmin;
+  /* background-color: white; */
 }
 
-.FNoteImg {
-  grid-column: 6/7;
+.GNoteContainer {
+  grid-area: GNoteContainer;
+  height: 6vmin;
+  /* background-color: orange; */
 }
 
+.FNoteContainer {
+  grid-area: FNoteContainer;
+  height: 6vmin;
+  /* background-color: purple; */
+}
 
 .offsetLeft {
   margin: 0 0 0 -2vmin;
 }
 
+.notPlayed {
+  display: none;
+}
+
+.played {
+  display: block;
+}
+
 @media only screen and (max-width: 1350px) {
   .staff {
-    height: 30vmin;
+    height: 28vmin;
     width: 97vmin;
+  }
+
+  .ENoteContainer {
+    grid-area: ENoteContainer;
+    height: 4vmin;
+    /* background-color: red; */
+  }
+  
+  .DNoteContainer {
+    grid-area: DNoteContainer;
+    height: 4vmin;
+    /* background-color: green; */
+  }
+  
+  .CNoteContainer {
+    grid-area: CNoteContainer;
+    height: 4vmin;
+    /* background-color: yellow; */
+  }
+  
+  .BNoteContainer {
+    grid-area: BNoteContainer;
+    height: 4vmin;
+    /* background-color: lightblue; */
+  }
+  
+  .ANoteContainer {
+    grid-area: ANoteContainer;
+    height: 4vmin;
+    /* background-color: white; */
+  }
+  
+  .GNoteContainer {
+    grid-area: GNoteContainer;
+    height: 4vmin;
+    /* background-color: orange; */
+  }
+  
+  .FNoteContainer {
+    grid-area: FNoteContainer;
+    height: 4vmin;
+    /* background-color: purple; */
   }
 }
