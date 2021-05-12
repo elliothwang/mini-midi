@@ -7,7 +7,7 @@ export default function MySongsPage ({ userSongs }) {
           userSongs.map((userSong, idx) => 
             <div className="songLine">Song {idx + 1}: { userSong }</div>
           )
-          : 
+          :
           "No songs yet!" }
       </div>
     </div>

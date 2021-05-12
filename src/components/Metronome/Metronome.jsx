@@ -14,7 +14,7 @@ export default function Metronome () {
 
   return (
     <div className="metronome">
-      <div>120 BPM</div>
+      <div>120 BPM &nbsp;</div>
       <button onClick={ playPauseMetronome }>{ isPlaying ? 'Pause' : 'Play' }</button>
     </div>
   )
