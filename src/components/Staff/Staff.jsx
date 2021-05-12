@@ -9,6 +9,11 @@ export default function Keyboard({ note, song }) {
       {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}
       <div className="songTracker">Song: { song }</div>
       <div className="staff">
+        <div className="staffLines">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         <div className="ENoteContainer">
           <div className={ note === "E" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
         </div>

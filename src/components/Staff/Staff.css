@@ -25,6 +25,24 @@
   mix-blend-mode: multiply;
 }
 
+.staffLines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 42vmin;
+  width: 138vmin;
+  margin: -47vmin 0 0 0;
+  z-index: 1;
+}
+
+.line {
+  height: 10.5vmin;
+  width: 138vmin;
+  border-bottom: 0.01vmin solid black;
+  z-index: 1;
+}
+
 .staff {
   display: grid;
   grid-template-areas: "ENoteContainer"
@@ -39,13 +57,13 @@
   width: 138vmin;
   border: 1px solid black;
   margin: -20vmin 0 0 0;
+  z-index: 2;
 }
 
 .staff > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 0.1px solid black;
 }
 
 .ENoteContainer {
@@ -97,6 +115,22 @@
 
 
 @media only screen and (max-width: 1350px) {
+  .staffLines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 28vmin;
+    width: 97vmin;
+    margin: -31.4vmin 0 0 0;
+    z-index: 1;
+  }
+
+  .line {
+    height: 7vmin;
+    width: 97vmin;
+  }
+
   .staff {
     height: 28vmin;
     width: 97vmin;
