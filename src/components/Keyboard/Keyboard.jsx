@@ -123,46 +123,19 @@ export default function Keyboard({ setNote, song, setSong }) {
 
   return (
     <div className="keyboardContainer">
-      <div
-        className="keyboard"
-        onClick={handlePianoClick}
-      >
-        <button className="key white C" value="C">
-          A
-        </button>
-        <button className="key black CSharp" value="CSharp">
-          W
-        </button>
-        <button className="key white D" value="D">
-          S
-        </button>
-        <button className="key black DSharp" value="DSharp">
-          E
-        </button>
-        <button className="key white E" value="E">
-          D
-        </button>
-        <button className="key white F" value="F">
-          F
-        </button>
-        <button className="key black FSharp" value="FSharp">
-          T
-        </button>
-        <button className="key white G" value="G">
-          G
-        </button>
-        <button className="key black GSharp" value="GSharp">
-          Y
-        </button>
-        <button className="key white A" value="A">
-          H
-        </button>
-        <button className="key black ASharp" value="ASharp">
-          U
-        </button>
-        <button className="key white B" value="B">
-          J
-        </button>
+      <div className="keyboard" onClick={handlePianoClick}>
+        <button className="key white C" value="C">A</button>
+        <button className="key black CSharp" value="CSharp">W</button>
+        <button className="key white D" value="D">S</button>
+        <button className="key black DSharp" value="DSharp">E</button>
+        <button className="key white E" value="E">D</button>
+        <button className="key white F" value="F">F</button>
+        <button className="key black FSharp" value="FSharp">T</button>
+        <button className="key white G" value="G">G</button>
+        <button className="key black GSharp" value="GSharp">Y</button>
+        <button className="key white A" value="A">H</button>
+        <button className="key black ASharp" value="ASharp">U</button>
+        <button className="key white B" value="B">J</button>
       </div>
     </div>
   );
