@@ -13,6 +13,10 @@ nav {
   cursor: default;
 }
 
+.sideNavOpenButton:hover {
+  cursor: pointer;
+}
+
 .sideNavOpenButton > img {
   height: 5vmin;
 }
@@ -49,6 +53,10 @@ nav {
 
 .spacer:hover {
   background-color: #111;
+}
+
+.sideNavCloseButton:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1350px) {

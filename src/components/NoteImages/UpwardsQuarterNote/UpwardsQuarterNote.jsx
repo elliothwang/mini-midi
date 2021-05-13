@@ -3,7 +3,7 @@ import './UpwardsQuarterNote.css';
 export default function UpwardsQuarterNote () {
   return (
     <div className="upwardsQuarterNoteImg">
-      <img src="https://lh3.googleusercontent.com/proxy/T0ycHPzYMqffX5oB_yuO6BuGfXm_HKmciGPjZvWqs0A4ZElxOs08E0UNyijQjfa0TVy-iRUInwAq4SUKJ5URR0qwTI_pR8om6-J87V7VipzHOmq96TPnVTHCa8EMt0ql2s-Yw46HyJYIv3UtRAMIxahvUvqI5uz4nErYJ9iXRwpbYPCvOPQ" alt="upwards quarter note" height="20vmin" />
+      <img src="https://lh3.googleusercontent.com/proxy/CekV8Qmi7rNZURXQu9q1-2EpKZKip7DaDhouIeYl9uskvsPk3tOk2o3R4i8194lTKJx1c3r3ywFLvj1HmGCNi-201NfpQ9wRIlFvyIsoHExHykhkqxdMmVCFKTuzpQhUaHTt3TeE_avp2oeyhmY7HICAJdtln4ZTDTHEZE0ML1WcL_d6sE0" alt="upwards quarter note" height="20vmin" />
     </div>
   )
 }
