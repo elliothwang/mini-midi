@@ -22,32 +22,45 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000)
-    } 
+    } else {
+      setIsPlaying(false);
+      BPM.current.pause();
+      setSeconds("Save");
+      document.querySelector(".record").classList.remove("glowingRed");
+    }
   });
 
 
   function recordSong() {
     // if (!isRecording === true) {
       if (seconds > 0) {
-        console.log('recording!')
         BPM.current.play();
         setIsPlaying(true);
         setIsRecording(true);
-      } if (seconds <= 0) {
-        console.log('recording completed')
-        setUserSongs([...userSongs, song]);
-        reset();
-        history.push('/songs');
+      } else {
+        if (song.length) {
+          setUserSongs([...userSongs, song]);
+          reset();
+          history.push("/songs");  
+        } else {
+          reset();
+          setNote("Play some notes first!")
+        }
       }
     // } else if (!isRecording === false) {
-    //     console.log('user reset')
+    //     console.log('user reset');
     //     reset();
     // }
   }
 
   function playPauseMetronome () {
-    isPlaying ? BPM.current.pause() : BPM.current.play();
-    setIsPlaying(!isPlaying);
+    if (seconds > 0) {
+      isPlaying ? BPM.current.pause() : BPM.current.play();
+      setIsPlaying(!isPlaying);
+    } else {
+      if (song.length) setNote("Save your song first!");
+      else setNote("Play some notes first!");
+    }
   }
 
   return (
@@ -58,7 +71,7 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
           <div>120 BPM &nbsp;</div>
           <button className={ isPlaying ? "playPauseMetronome glowingGreen" : "playPauseMetronome"} onClick={ playPauseMetronome } >{ isPlaying ? 'Pause' : 'Play' }</button>
         </div>
-        <div className="noteTracker">Note: { note }</div>
+        <div className="noteTracker">{ note }</div>
       </div>
     </div>
   )

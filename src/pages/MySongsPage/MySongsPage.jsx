@@ -4,9 +4,9 @@ import Staff from "../../components/Staff/Staff";
 
 export default function MySongsPage ({ userSongs }) {
 
-  function showStaff () {
-    console.log('show staff');
-  }
+  // function showStaff () {
+  //   console.log()
+  // }
 
   return (
     <div className="mySongsPage">
@@ -16,7 +16,7 @@ export default function MySongsPage ({ userSongs }) {
           userSongs.map((userSong, idx) => 
             <div className="songLine">
               Song {idx + 1}: { userSong }
-              <button className="showStaff" onClick={showStaff}>Show Staff</button>
+              <button className="showStaff" onClick={() => console.log({ userSong })}>Show Staff</button>
             </div>
           )
           :
