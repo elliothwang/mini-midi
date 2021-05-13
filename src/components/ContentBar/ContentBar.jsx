@@ -1,10 +1,12 @@
 import "./ContentBar.css";
 import { useState, useRef } from "react";
-import BPM120 from '../../assets/BPM/BPM120.mp3';
+import { useHistory } from "react-router-dom";
+import BPM120 from "../../assets/BPM/BPM120.mp3";
 
 export default function ContentBar ({ note, setNote, song, setSong, userSongs, setUserSongs }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const BPM = useRef(new Audio(BPM120));
+  const history = useHistory();
 
   function recordSong() {
     if (song.length) {
@@ -13,6 +15,7 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
       setUserSongs([...userSongs, song]);
       setNote("");
       setSong([]);
+      history.push('/songs');
     } else {
       BPM.current.pause();
       setIsPlaying(false);

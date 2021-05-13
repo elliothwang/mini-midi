@@ -12,9 +12,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <div className="welcome"><span>Welcome, {user.name}!</span></div>
       <div className="dropdown">
-        <div className="dropdownIcon"><img 
-        src="https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739310fjzs2n2wxt.png"  
-        alt="dropdown menu icon" /></div>
+        <div className="dropdownIcon"><img src="https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739310fjzs2n2wxt.png" alt="dropdown menu icon" /></div>
         <div className="dropdownContent">
           <Link to="/">Home</Link>
           <Link to="/songs">My Songs</Link>

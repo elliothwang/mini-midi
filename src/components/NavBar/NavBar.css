@@ -9,6 +9,10 @@ nav {
   font-size: 3vmin;
 }
 
+.welcome:hover {
+  cursor: default;
+}
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -27,6 +31,7 @@ nav {
 }
 
 .dropdownIcon:hover {
+  cursor: pointer;
   background-color: white;
 }
 
