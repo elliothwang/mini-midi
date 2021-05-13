@@ -88,7 +88,7 @@
     display: flex;
     justify-content: center;
     height: 50vmin;
-    width: 98vmin;
+    width: 91vmin;
   }
 
   .key {
@@ -97,13 +97,13 @@
 
   .white {
     height: 50vmin;
-    width: 14vmin;
+    width: 13.2vmin;
     border-radius: 0 0 2vmin 2vmin;
   }
   
   .black {
     height: 30vmin;
-    width: 9.5vmin;
+    width: 8.5vmin;
   }
 
   .A,
@@ -112,7 +112,7 @@
   .E,
   .G,
   .black {
-    margin: 0 0 0 -4.8vmin;
+    margin: 0 0 0 -4.3vmin;
   }
 
   .C {

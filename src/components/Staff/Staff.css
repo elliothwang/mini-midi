@@ -120,7 +120,7 @@
 @media only screen and (max-width: 1350px) {
   .staff {
     height: 28vmin;
-    width: 97vmin;
+    width: 91vmin;
   }
 
   .staffLines {
@@ -129,16 +129,15 @@
     justify-content: center;
     align-items: center;
     height: 28vmin;
-    width: 97vmin;
+    width: 91vmin;
     margin: -31.4vmin 0 0 0;
     z-index: 1;
   }
 
   .line {
     height: 7vmin;
-    width: 97vmin;
+    width: 90.9vmin;
   }
-
 
   .ENoteContainer {
     grid-area: ENoteContainer;
@@ -174,5 +173,4 @@
     grid-area: FNoteContainer;
     height: 4vmin;
   }
-
 }
