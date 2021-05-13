@@ -1,6 +1,5 @@
 import "./Staff.css";
 import UpwardsQuarterNote from "../NoteImages/UpwardsQuarterNote/UpwardsQuarterNote";
-import DownwardsQuarterNote from "../NoteImages/DownwardsQuarterNote/DownwardsQuarterNote";
 import Sharp from "../NoteImages/Sharp/Sharp";
 
 export default function Keyboard({ note, song }) {
@@ -15,18 +14,18 @@ export default function Keyboard({ note, song }) {
           <div className="line"></div>
         </div>
         <div className="ENoteContainer">
-          <div className={ note === "E" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "E" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
         </div>
         <div className="DNoteContainer offsetLeft">
-          <div className={ note === "D" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "D" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
           <div className={ note === "DSharp" ? "played" : "notPlayed" }><Sharp /></div>
         </div>
         <div className="CNoteContainer">
-          <div className={ note === "C" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "C" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
           <div className={ note === "CSharp" ? "played" : "notPlayed" }><Sharp /></div>
         </div>
         <div className="BNoteContainer offsetLeft">
-          <div className={ note === "B" ? "played" : "notPlayed" }><DownwardsQuarterNote /></div>
+          <div className={ note === "B" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
         </div>
         <div className="ANoteContainer">
           <div className={ note === "A" ? "played" : "notPlayed" }><UpwardsQuarterNote /></div>
