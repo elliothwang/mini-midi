@@ -31,7 +31,7 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
         <button className="record" onClick={ recordSong }>Record</button>
         <div className="metronome">
           <div>120 BPM &nbsp;</div>
-          <button onClick={ playPauseMetronome }>{ isPlaying ? 'Pause' : 'Play' }</button>
+          <button className={ isPlaying ? "playPauseMetronome glowingGreen" : "playPauseMetronome"} onClick={ playPauseMetronome } >{ isPlaying ? 'Pause' : 'Play' }</button>
         </div>
         <div className="noteTracker">Note: { note }</div>
       </div>
