@@ -12,6 +12,25 @@
   margin: 0 5vmin 0 0;
 }
 
+@keyframes glowingRed {
+  0% {
+    background-color: #ff0000;
+    box-shadow: 0 0 3px #ff0000;
+  }
+  50% {
+    background-color: #ff8787;
+    box-shadow: 0 0 10px #ff8787;
+  }
+  100% {
+    background-color: #ff0000;
+    box-shadow: 0 0 3px #ff0000;
+  }
+}
+
+.glowingRed {
+  animation: glowingRed 1000ms infinite;
+}
+
 .metronome {
   display: flex;
   justify-content: center;

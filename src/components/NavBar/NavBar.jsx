@@ -9,7 +9,6 @@ export default function NavBar({ user, setUser }) {
   }
 
   function openSideNav () {
-    console.log('opening nav')
     document.querySelector(".sideNav").style.width = "250px";
   }
 
