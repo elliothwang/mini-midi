@@ -9,10 +9,7 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  // seeding userSongs to work on MySongsPage
-  const [userSongs, setUserSongs] = useState([
-    // ["C", "F", "E", "D", "F", "DSharp", "D"],
-  ]);
+  const [userSongs, setUserSongs] = useState([]);
 
   return (
     <main className="App">

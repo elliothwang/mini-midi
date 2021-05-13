@@ -12,30 +12,42 @@ import G from '../assets/Notes/G.mp3';
 import GSharp from '../assets/Notes/GSharp.mp3';
 
 export default function playNote(note) {
-  // new Audio(`../assets/Notes/${note}.mp3`).play();
-  if (note === "C") {
+  switch (note) {
+  case "C":
     new Audio(C).play();
-  } else if (note === "CSharp") {
+    break;
+  case "CSharp":
     new Audio(CSharp).play();
-  } else if (note === "D") {
+    break;
+  case "D":
     new Audio(D).play();
-  } else if (note === "DSharp") {
+    break;
+  case "DSharp":
     new Audio(DSharp).play();
-  } else if (note === "E") {
+    break;
+  case "E":
     new Audio(E).play();
-  } else if (note === "F") {
+    break;
+  case "F":
     new Audio(F).play();
-  } else if (note === "FSharp") {
+    break;
+  case "FSharp":
     new Audio(FSharp).play();
-  } else if (note === "G") {
+    break;
+  case "G":
     new Audio(G).play();
-  } else if (note === "GSharp") {
+    break;
+  case "GSharp":
     new Audio(GSharp).play();
-  } else if (note === "A") {
+    break;
+  case "A":
     new Audio(A).play();
-  } else if (note === "ASharp") {
+    break;
+  case "ASharp":
     new Audio(ASharp).play();
-  } else if (note === "B") {
+    break;
+  case "B":
     new Audio(B).play();
+    break;
   }
 }
