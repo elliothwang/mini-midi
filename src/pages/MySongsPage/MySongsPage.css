@@ -1,14 +1,15 @@
 .mySongsContainer {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5vmin;
 }
 
 .songLine {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.songNotes {
-  display: flex;
-  flex-direction: row;
+  margin: 3vmin 0 0 0;
 }

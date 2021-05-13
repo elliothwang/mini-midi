@@ -6,7 +6,6 @@ export default function Keyboard({ note, song }) {
   return (
     <div className="staffContainer">
       {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}
-      <div className="songTracker">Song: { song }</div>
       <div className="staff">
         <div className="staffLines">
           <div className="line"></div>

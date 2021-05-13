@@ -3,6 +3,31 @@ import playNote from "../../utilities/playNote";
 
 export default function Keyboard({ setNote, song, setSong }) {
 
+  function handleWhiteKeyPress (note) {
+    playNote(note);
+    setNote(note);
+    setSong([...song, note]);
+    document.querySelector(`.${note}`).style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
+    document.querySelector(`.${note}`).style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
+  }
+
+  function handleWhiteKeyRelease (note) {
+    document.querySelector(`.${note}`).style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
+    document.querySelector(`.${note}`).style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
+  }
+
+  function handleBlackKeyRelease (note) {
+    document.querySelector(`.${note}`).style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
+    document.querySelector(`.${note}`).style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
+  }
+
+  function handleBlackKeyPress (note) {
+    playNote(note);
+    setNote(note);
+    setSong([...song, note]);
+    document.querySelector(`.${note}`).style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
+    document.querySelector(`.${note}`).style.background = "linear-gradient(to right, #444 0%, #222 100%)";  }
+
   function handlePianoClick(evt) {
     playNote(evt.target.value);
     setNote(evt.target.value);
@@ -11,126 +36,86 @@ export default function Keyboard({ setNote, song, setSong }) {
 
   function handleKeyDown(evt) {
     let keyCode = evt.keyCode;
-    if (keyCode === 65) {
-      playNote("C");
-      setNote("C");
-      setSong([...song, "C"]);
-      document.querySelector(".C").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".C").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 87) {
-      playNote("CSharp");
-      setNote("CSharp");
-      setSong([...song, "CSharp"]);
-      document.querySelector(".CSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".CSharp").style.background = "linear-gradient(to right, #444 0%, #222 100%)";
-    } else if (keyCode === 83) {
-      playNote("D");
-      setNote("D");
-      setSong([...song, "D"]);
-      document.querySelector(".D").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".D").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 69) {
-      playNote("DSharp");
-      setNote("DSharp");
-      setSong([...song, "DSharp"]);
-      document.querySelector(".DSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".DSharp").style.background = "linear-gradient(to right, #444 0%, #222 100%)";
-
-    } else if (keyCode === 68) {
-      playNote("E");
-      setNote("E");
-      setSong([...song, "E"]);
-      document.querySelector(".E").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".E").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 70) {
-      playNote("F");
-      setNote("F");
-      setSong([...song, "F"]);
-      document.querySelector(".F").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".F").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 84) {
-      playNote("FSharp");
-      setNote("FSharp");
-      setSong([...song, "FSharp"]);
-      document.querySelector(".FSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".FSharp").style.background = "linear-gradient(to right, #444 0%, #222 100%)";
-
-    } else if (keyCode === 71) {
-      playNote("G");
-      setNote("G");
-      setSong([...song, "G"]);
-      document.querySelector(".G").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".G").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 89) {
-      playNote("GSharp");
-      setNote("GSharp");
-      setSong([...song, "GSharp"]);
-      document.querySelector(".GSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".GSharp").style.background = "linear-gradient(to right, #444 0%, #222 100%)";
-
-    } else if (keyCode === 72) {
-      playNote("A");
-      setNote("A");
-      setSong([...song, "A"]);
-      document.querySelector(".A").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".A").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
-    } else if (keyCode === 85) {
-      playNote("ASharp");
-      setNote("ASharp");
-      setSong([...song, "ASharp"]);
-      document.querySelector(".ASharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".ASharp").style.background = "linear-gradient(to right, #444 0%, #222 100%)";
-
-      
-    } else if (keyCode === 74) {
-      playNote("B");
-      setNote("B");
-      setSong([...song, "B"]);
-      document.querySelector(".B").style.boxShadow = "2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".B").style.background = "linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)";
+    switch (keyCode) {
+    case 65:
+      handleWhiteKeyPress("C");
+      break;
+    case 87:
+      handleBlackKeyPress("CSharp");
+      break;
+    case 83:
+      handleWhiteKeyPress("D");
+      break;
+    case 69:
+      handleBlackKeyPress("DSharp");
+      break;
+    case 68:
+      handleWhiteKeyPress("E");
+      break;
+    case 70:
+      handleWhiteKeyPress("F");
+      break;
+    case 84:
+      handleBlackKeyPress("FSharp");
+      break;
+    case 71:
+      handleWhiteKeyPress("G");
+      break;
+    case 89:
+      handleBlackKeyPress("GSharp");
+      break;
+    case 72:
+      handleWhiteKeyPress("A");
+      break;
+    case 85:
+      handleBlackKeyPress("ASharp");
+      break;
+    case 74:
+      handleWhiteKeyPress("B");
+      break;
     }
   }
 
   function handleKeyUp(evt) {
     let keyCode = evt.keyCode;
-    if (keyCode === 65) {
-      document.querySelector(".C").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".C").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 87) {
-      document.querySelector(".CSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".CSharp").style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
-    } else if (keyCode === 83) {
-      document.querySelector(".D").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".D").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 69) {
-      document.querySelector(".DSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".DSharp").style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
-    } else if (keyCode === 68) {
-      document.querySelector(".E").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".E").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 70) {
-      document.querySelector(".F").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".F").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 84) {
-      document.querySelector(".FSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".FSharp").style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
-    } else if (keyCode === 71) {
-      document.querySelector(".G").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".G").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 89) {
-      document.querySelector(".GSharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".GSharp").style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
-    } else if (keyCode === 72) {
-      document.querySelector(".A").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".A").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
-    } else if (keyCode === 85) {
-      document.querySelector(".ASharp").style.boxShadow = "-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)";
-      document.querySelector(".ASharp").style.background = "linear-gradient(45deg, #222 0%, #555 100%)";
-    } else if (keyCode === 74) {
-      document.querySelector(".B").style.boxShadow = "-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)";
-      document.querySelector(".B").style.background = "linear-gradient(to bottom, #eee 0%, #fff 100%)";
+    switch (keyCode) {
+    case 65:
+      handleWhiteKeyRelease("C");
+      break;
+    case 87:
+      handleBlackKeyRelease("CSharp")
+      break;
+    case 83:
+      handleWhiteKeyRelease("D");
+      break;
+    case 69:
+      handleBlackKeyRelease("DSharp")
+      break;
+    case 68:
+      handleWhiteKeyRelease("E");
+      break;
+    case 70:
+      handleWhiteKeyRelease("F");
+      break;
+    case 84:
+      handleBlackKeyRelease("FSharp")
+      break;
+    case 71:
+      handleWhiteKeyRelease("G");
+      break;
+    case 89:
+      handleBlackKeyRelease("GSharp")
+      break;
+    case 72:
+      handleWhiteKeyRelease("A");
+      break;
+    case 85:
+      handleBlackKeyRelease("ASharp")
+      break;
+    case 74:
+      handleWhiteKeyRelease("B");
+      break;
     }
-    // reset note & song state
   }
 
   document.body.onkeydown = handleKeyDown;
