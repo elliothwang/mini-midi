@@ -19,14 +19,15 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       <div className="welcome"><span>Welcome, {user.name}!</span></div>
+      <div className="header">Mini Midi</div>
         <div className="sideNavOpenButton" onClick={ openSideNav }><img src="https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739310fjzs2n2wxt.png" alt="dropdown menu icon" /></div>
-            <div className="sideNav">
-              <Link to="/" onClick={ closeSideNav }>Home</Link>
-              <Link to="/songs" onClick={ closeSideNav }>My Songs</Link>
-              <div className="spacer"></div>
-              <div className="sideNavCloseButton" onClick={ closeSideNav }>Close</div>
-              <Link to="" onClick={handleLogOut}>Log Out</Link>
-            </div>
+          <div className="sideNav">
+            <Link to="/" onClick={ closeSideNav }>Home</Link>
+            <Link to="/songs" onClick={ closeSideNav }>My Songs</Link>
+            <div className="spacer"></div>
+            <div className="sideNavCloseButton" onClick={ closeSideNav }>Close</div>
+            <Link to="" onClick={handleLogOut}>Log Out</Link>
+          </div>
     </nav>
   );
 }

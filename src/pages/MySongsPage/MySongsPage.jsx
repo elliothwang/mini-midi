@@ -12,7 +12,6 @@ export default function MySongsPage ({ userSongs }) {
 
   return (
     <div className="mySongsPage">
-      <h1>My Songs Page!</h1>
       <div className="userSongsContainer">
         { userSongs.length ? 
           userSongs.map((userSong, idx) => 

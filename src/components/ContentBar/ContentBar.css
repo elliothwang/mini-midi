@@ -1,9 +1,12 @@
+.mainContainer {
+  margin: 3vmin 0 0 0;
+}
+
 .contentBar {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50% auto;
-  margin: 0 0 -4vmin 0;
 }
 
 .record {
@@ -82,17 +85,17 @@
   }
   
   .record {
-    font-size: 4vmin;
+    font-size: 3vmin;
     margin: 0 2vmin 0 0;
   }
   
   .metronome > * {
-    font-size: 4vmin;
+    font-size: 3vmin;
     margin: 0 0 -6vmin 0;
   }
   
   .noteTracker {
-    font-size: 4vmin;
+    font-size: 3vmin;
     margin: 0 0 0 3vmin;
   }
 }

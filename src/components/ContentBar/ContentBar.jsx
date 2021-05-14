@@ -4,71 +4,47 @@ import { useHistory } from "react-router-dom";
 import { useInterval } from "../../hooks/useInterval";
 import BPM120 from "../../assets/BPM/BPM120.mp3";
 
-export default function ContentBar ({ note, setNote, song, setSong, userSongs, setUserSongs }) {
+export default function ContentBar ({ note, setNote, song, setSong, userSongs, setUserSongs, isRecording, setIsRecording }) {
   const [seconds, setSeconds] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  // const [isRecording, setIsRecording] = useState(false);
+  const [completedRecording, setCompletedRecording] = useState(false);
   const BPM = useRef(new Audio(BPM120));
   const history = useHistory();
 
-  function reset () {
-    BPM.current.pause();
-    setIsPlaying(false);
-    // setIsRecording(false);
-    setNote("");
-    setSong([]);
-    // setSeconds(10);
-  }
-
-  // useEffect(() => {
-  //   if (seconds > 0) {
-  //     setTimeout(() => setSeconds(seconds - 1), 1000)
-  //   } else {
-  //     setIsPlaying(false);
-  //     BPM.current.pause();
-  //     setSeconds("Save");
-  //     document.querySelector(".record").classList.remove("glowingRed");
-  //   }
-  // });
-
   useInterval(() => {
-    console.log("tick");
     setSeconds((currSeconds) => currSeconds - 1);
-  }, seconds ? 1000 : null)
+  }, seconds ? 1000 : null);
+
+  useEffect(() => {
+    if (!seconds) setIsRecording(false);
+  })
 
   function recordSong() {
     setSeconds(10);
-    if (seconds > 0) {
+    if (!completedRecording) {
+      setIsRecording(true);
+      setCompletedRecording(true);
       setNote("");
       setSong([]);
-      BPM.current.play();
-      setIsPlaying(true);
-      // setIsRecording(true);
     } else {
       if (song.length) {
         setUserSongs([...userSongs, song]);
         history.push("/songs");  
       } else {
-        setNote("Play some notes first!");
+        setNote("Play a note!");
       }
-      reset();
     }
   }
 
   function playPauseMetronome () {
-    if (seconds > 0) {
-      isPlaying ? BPM.current.pause() : BPM.current.play();
-      setIsPlaying(!isPlaying);
-    } else {
-      if (song.length) setNote("Save your song first!");
-      else setNote("Play some notes first!");
-    }
+    isPlaying ? BPM.current.pause() : BPM.current.play();
+    setIsPlaying(!isPlaying);
   }
 
   return (
     <div className="mainContainer">
       <div className="contentBar">
-        <button className={ seconds ? "record glowingRed" : "record" } onClick={ recordSong }>{ seconds ? seconds : "Record" }</button>
+        <button className={ seconds ? "record glowingRed" : "record" } onClick={ recordSong }>{ seconds ? seconds : completedRecording ? "Save" : "Record" }</button>
         <div className="metronome">
           <div>120 BPM &nbsp;</div>
           <button className={ isPlaying ? "playPauseMetronome glowingGreen" : "playPauseMetronome"} onClick={ playPauseMetronome } >{ isPlaying ? 'Pause' : 'Play' }</button>
@@ -78,36 +54,3 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
     </div>
   )
 }
-
-
-
-
-// useEffect(() => {
-//   if (seconds > 0) {
-//     setTimeout(() => setSeconds(seconds - 1), 1000)
-//   } else {
-//     setIsPlaying(false);
-//     BPM.current.pause();
-//     setSeconds("Save");
-//     document.querySelector(".record").classList.remove("glowingRed");
-//   }
-// });
-
-// function recordSong() {
-//   if (seconds > 0) {
-//     setNote("");
-//     setSong([]);
-//     BPM.current.play();
-//     setIsPlaying(true);
-    // setIsRecording(true);
-//   } else {
-//       if (song.length) {
-//         setUserSongs([...userSongs, song]);
-//         reset();
-//         history.push("/songs");  
-//       } else {
-//         reset();
-//         setNote("Play some notes first!");
-//     }
-//   }
-// }

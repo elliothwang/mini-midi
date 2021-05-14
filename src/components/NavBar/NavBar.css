@@ -9,6 +9,14 @@ nav {
   font-size: 3vmin;
 }
 
+.header {
+  font-size: 6vmin;
+  font-weight: bold;
+  letter-spacing: 0.5vmin;
+  margin: 0 0 0 -11vmin;
+}
+
+
 .welcome:hover {
   cursor: default;
 }
@@ -28,7 +36,7 @@ nav {
   z-index: 3;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #E2D9D1;
   overflow-x: hidden;
   padding-top: 5vmin;
   transition: 0.5s;
@@ -38,7 +46,7 @@ nav {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 3vmin;
-  color: #818181;
+  color: #615954;
   display: block;
   transition: 0.3s;
 }
@@ -52,7 +60,7 @@ nav {
 }
 
 .spacer:hover {
-  background-color: #111;
+  background-color: #E2D9D1;
 }
 
 .sideNavCloseButton:hover {
@@ -64,6 +72,11 @@ nav {
     font-size: 2.5vmin;
   }
 
+  .header {
+    font-size: 3.5vmin;
+    margin: 0 0 0 -9vmin;
+  }
+
   .sideNav > img {
     height: 4vmin;
   }
@@ -73,11 +86,16 @@ nav {
   .sideNav {
     padding-top: 15px;
   }
+
   .sideNav > img {
     height: 2vmin;
   }
 
   .sideNav > * {
     font-size: 2vmin;
+  }
+
+  .spacer {
+    height: 45vmin;
   }
 }
