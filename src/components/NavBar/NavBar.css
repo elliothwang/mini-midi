@@ -21,12 +21,34 @@ nav {
   cursor: default;
 }
 
-.sideNavOpenButton:hover {
-  cursor: pointer;
+.sideNavOpenButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5vmin;
+  width: 5vmin;
+  background-color: #E2D9D1;
+  border: 0.4vmin solid black;
+  border-radius: 10px;
 }
 
-.sideNavOpenButton > img {
-  height: 5vmin;
+.sideNavOpenButtonLine1, .sideNavOpenButtonLine2, .sideNavOpenButtonLine3 {
+  height: 1.2vmin;
+  width: 3vmin;
+  border-bottom: 0.4vmin solid black;
+}
+
+.sideNavOpenButtonLine1 {
+  margin: -0.6vmin 0 0 0;
+}
+
+.sideNavOpenButtonLine3 {
+  margin: -0.05vmin 0 0 0;
+}
+
+.sideNavOpenButton:hover {
+  cursor: pointer;
 }
 
 .sideNav {
@@ -46,7 +68,7 @@ nav {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 3vmin;
-  color: #615954;
+  color: black;
   display: block;
   transition: 0.3s;
 }
@@ -77,18 +99,30 @@ nav {
     margin: 0 0 0 -9vmin;
   }
 
-  .sideNav > img {
+  .sideNavOpenButton {
     height: 4vmin;
+    width: 4vmin;
+    border: 0.31vmin solid black;
+  }
+
+  .sideNavOpenButtonLine1, .sideNavOpenButtonLine2, .sideNavOpenButtonLine3 {
+    height: 1vmin;
+    width: 2.5vmin;
+    border-bottom: 0.31vmin solid black;
+  }
+  
+  .sideNavOpenButtonLine1 {
+    margin: -0.6vmin 0 0 0;
+  }
+  
+  .sideNavOpenButtonLine3 {
+    margin: -0.05vmin 0 0 0;
   }
 }
 
 @media screen and (max-height: 450px) {
   .sideNav {
     padding-top: 15px;
-  }
-
-  .sideNav > img {
-    height: 2vmin;
   }
 
   .sideNav > * {
