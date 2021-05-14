@@ -9,11 +9,7 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [userSongs, setUserSongs] = useState([
-    ["C", "C", "C", "C", "C", "C"],
-    ["D", "D", "D", "E", "E", "E"],
-    ["C", "C", "C", "C", "C", "C", "D", "D", "D", "E", "E", "E", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C", "C"],
-  ]);
+  const [userSongs, setUserSongs] = useState([]);
 
   return (
     <main className="App">

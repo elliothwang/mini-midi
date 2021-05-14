@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useInterval } from "../../hooks/useInterval";
 import BPM120 from "../../assets/BPM/BPM120.mp3";
+// import * as songsAPI from "../../utilities/songs-api";
 
 export default function ContentBar ({ note, setNote, song, setSong, userSongs, setUserSongs, isRecording, setIsRecording }) {
   const [seconds, setSeconds] = useState(0);
@@ -19,7 +20,7 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
     if (!seconds) setIsRecording(false);
   })
 
-  function recordSong() {
+  async function recordSong() {
     setSeconds(10);
     if (!completedRecording) {
       setIsRecording(true);
@@ -30,6 +31,8 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
       if (song.length) {
         BPM.current.pause();
         setIsPlaying(false);
+        // const newUserSong = await songsAPI.create(song);
+        // setUserSongs([...userSongs, newUserSong]);
         setUserSongs([...userSongs, song]);
         history.push("/songs");
       } else {

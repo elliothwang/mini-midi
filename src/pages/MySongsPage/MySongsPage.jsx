@@ -1,11 +1,20 @@
 import "./MySongsPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../components/Staff/Staff.css";
 import Staff from "../../components/Staff/Staff";
+// import * as songsAPI from "../../utilities/songs-api";
+
 
 export default function MySongsPage ({ userSongs }) {
   const [activeStaff, setActiveStaff] = useState(0);
   const [activeSong, setActiveSong] = useState(0);
+
+  // useEffect(() => {
+  //   async function index() {
+  //     const userSongs = await songsAPI.index();
+  //   }
+  //   index();
+  // }, []);
 
   function playUserSong (evt) {
     setActiveSong(evt.target.value);
@@ -28,7 +37,7 @@ export default function MySongsPage ({ userSongs }) {
               )}
               <button value={ idx } className="playUserSongButton" onClick={playUserSong}>{activeSong === idx ? "Pause" : "Play"}</button>
               <button value={ idx } className="showStaffButton" onClick={showStaff}>{activeStaff === idx ? "Hide Staff" : "Show Staff"}</button>
-              <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div>
+              {/* <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div> */}
             </div>
           )
           :
