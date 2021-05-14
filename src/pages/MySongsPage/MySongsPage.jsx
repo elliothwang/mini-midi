@@ -37,7 +37,7 @@ export default function MySongsPage ({ userSongs }) {
               )}
               <button value={ idx } className="playUserSongButton" onClick={playUserSong}>{activeSong === idx ? "Pause" : "Play"}</button>
               <button value={ idx } className="showStaffButton" onClick={showStaff}>{activeStaff === idx ? "Hide Staff" : "Show Staff"}</button>
-              {/* <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div> */}
+              <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div>
             </div>
           )
           :
