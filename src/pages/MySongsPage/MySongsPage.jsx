@@ -4,10 +4,12 @@ import "../../components/Staff/Staff.css";
 import Staff from "../../components/Staff/Staff";
 
 export default function MySongsPage ({ userSongs }) {
-  const [activeStaff, setActiveStaff] = useState("");
+  const [activeStaff, setActiveStaff] = useState(0);
 
-  function showStaff (idx) {
-    document.querySelector(".userSongStaff").style.display = "block";
+  function showStaff (evt) {
+    console.log('showing staff');
+    setActiveStaff(evt.target.value);
+    console.log(activeStaff);
   }
 
   return (
@@ -15,10 +17,13 @@ export default function MySongsPage ({ userSongs }) {
       <div className="userSongsContainer">
         { userSongs.length ? 
           userSongs.map((userSong, idx) => 
-            <div className="userSongContainer">
-              <div className="userSongInfo">Song {idx + 1}: { userSong }</div>
-              <button className="showStaffButton" onClick={showStaff}>Show Staff</button>
-              <div className="userSongStaff"><Staff /></div>
+            <div className={activeStaff === idx ? "userSingleSongContainerSelected" : "userSingleSongContainerUnselected"}>
+              <div className="userSongInfo">Song {idx + 1}: &nbsp;</div>
+                { userSong.map(userSongNote => 
+                  <div className="userSongNotes">{userSongNote} &nbsp;</div>
+              )}
+              <button value={ idx } className="showStaffButton" onClick={showStaff}>{activeStaff === idx ? "Hide Staff" : "Show Staff"}</button>
+              <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div>
             </div>
           )
           :

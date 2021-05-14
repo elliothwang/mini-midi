@@ -21,8 +21,8 @@
     box-shadow: 0 0 3px #ff0000;
   }
   50% {
-    background-color: #ff8787;
-    box-shadow: 0 0 10px #ff8787;
+    background-color: #ff6b6b;
+    box-shadow: 0 0 10px #ff6b6b;
   }
   100% {
     background-color: #ff0000;
@@ -51,6 +51,11 @@
   background-color: green;
 }
 
+.playPauseMetronome > img {
+  margin: 0 0 -1vmin 0.7vmin;
+  height: 5.6vmin;
+}
+
 @keyframes glowingGreen {
   0% {
     background-color: #2ba805;
@@ -70,9 +75,16 @@
   animation: glowingGreen 500ms infinite;
 }
 
-.noteTracker {
+.noteTrackerSelected {
   font-size: 5vmin;
+  padding: 0.8vmin;
   margin: 0 0 0 5vmin;
+  border: 1px solid black;
+  border-radius: 0.5vmin;
+}
+
+.noteTrackerUnselected {
+  border: none;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -93,8 +105,13 @@
     font-size: 3vmin;
     margin: 0 0 -6vmin 0;
   }
+
+  .playPauseMetronome > img {
+    margin: 0 0 -0.4vmin 0.7vmin;
+    height: 3vmin;
+  }
   
-  .noteTracker {
+  .noteTrackerSelected {
     font-size: 3vmin;
     margin: 0 0 0 3vmin;
   }

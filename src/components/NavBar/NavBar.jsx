@@ -18,8 +18,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <div className="welcome"><span>Welcome, {user.name}!</span></div>
-      <div className="header">Mini Midi</div>
+      <div className="welcome"><span>welcome, <strong>{user.name}</strong>!</span></div>
+      <div className="header">mini midi</div>
         <div className="sideNavOpenButton" onClick={ openSideNav }><img src="https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739310fjzs2n2wxt.png" alt="dropdown menu icon" /></div>
           <div className="sideNav">
             <Link to="/" onClick={ closeSideNav }>Home</Link>

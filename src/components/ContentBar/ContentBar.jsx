@@ -46,10 +46,9 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
       <div className="contentBar">
         <button className={ seconds ? "record glowingRed" : "record" } onClick={ recordSong }>{ seconds ? seconds : completedRecording ? "Save" : "Record" }</button>
         <div className="metronome">
-          <div>120 BPM &nbsp;</div>
-          <button className={ isPlaying ? "playPauseMetronome glowingGreen" : "playPauseMetronome"} onClick={ playPauseMetronome } >{ isPlaying ? 'Pause' : 'Play' }</button>
+          <button className={ isPlaying ? "playPauseMetronome glowingGreen" : "playPauseMetronome"} onClick={ playPauseMetronome } >{ isPlaying ? 'Pause' : 'Play' }<img src="https://img.icons8.com/ios/452/metronome.png" alt="metronome image" /></button>
         </div>
-        <div className="noteTracker">{ note }</div>
+        <div className={ note ? "noteTrackerSelected" : "noteTrackerUnselected" }>{ note }</div>
       </div>
     </div>
   )

@@ -4,20 +4,64 @@
   justify-content: center;
   align-items: center;
   font-size: 3.5vmin;
+  margin: 3vmin 0 0 0;
+}
+
+.userSingleSongContainerSelected {
+  position: relative;
+  height: 45vmin;
+  width: 138vmin;
+}
+
+.userSingleSongContainerUnselected {
+  position: relative;
+  height: 20vmin;
+  width: 138vmin;
 }
 
 .userSongInfo {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 138vmin;
+  height: 6vmin;
   margin: 3vmin 0 0 0;
+  background-color: slategray;
+  border-radius: 10px;
+}
+
+.userSongNotes {
+  display: inline;
 }
 
 .showStaffButton {
+  top: 2.7vmin;
+  right: 0;
+  position: absolute;
   background-color: gray;
 }
 
-.userSongStaff {
+.staffSelected {
+  display: block;
+}
+
+.staffUnselected {
   display: none;
+}
+
+@media only screen and (max-width: 1350px) {
+  .userSongsContainer {
+    margin: 0;
+  }
+
+  .userSingleSongContainerSelected {
+    width: 91vmin;
+  }
+  
+  .userSingleSongContainerUnselected {
+    width: 91vmin;
+  }
+  .userSongInfo {
+    width: 91vmin;
+  }
 }
