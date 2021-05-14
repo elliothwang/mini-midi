@@ -2,7 +2,7 @@ import "./Staff.css";
 import UpwardsQuarterNote from "../NoteImages/UpwardsQuarterNote/UpwardsQuarterNote";
 import Sharp from "../NoteImages/Sharp/Sharp";
 
-export default function Keyboard({ note }) {
+export default function Staff({ note }) {
   return (
     <div className="staffContainer">
       {/* <div className="trebleClefImgContainer"><div className="trebleClefImg"></div></div> */}

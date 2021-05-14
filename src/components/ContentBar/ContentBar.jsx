@@ -28,9 +28,13 @@ export default function ContentBar ({ note, setNote, song, setSong, userSongs, s
       setSong([]);
     } else {
       if (song.length) {
+        BPM.current.pause();
+        setIsPlaying(false);
         setUserSongs([...userSongs, song]);
-        history.push("/songs");  
+        history.push("/songs");
       } else {
+        BPM.current.pause();
+        setIsPlaying(false);
         setNote("Play a note!");
       }
     }

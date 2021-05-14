@@ -9,7 +9,7 @@
 
 .userSingleSongContainerSelected {
   position: relative;
-  height: 45vmin;
+  height: 44vmin;
   width: 138vmin;
 }
 
@@ -31,18 +31,27 @@
 }
 
 .userSongNotes {
+  font-size: 3vmin;
   display: inline;
+}
+
+.playUserSongButton {
+  top: 2.7vmin;
+  left: 0;
+  position: absolute;
+  background-color: #968c84;
 }
 
 .showStaffButton {
   top: 2.7vmin;
   right: 0;
   position: absolute;
-  background-color: gray;
+  background-color: #968c84;
 }
 
 .staffSelected {
   display: block;
+  margin: -3vmin 0 0 0;
 }
 
 .staffUnselected {
@@ -61,7 +70,13 @@
   .userSingleSongContainerUnselected {
     width: 91vmin;
   }
+
   .userSongInfo {
     width: 91vmin;
+  }
+
+  .userSongNotes {
+    font-size: 2.5vmin;
+    display: inline;
   }
 }

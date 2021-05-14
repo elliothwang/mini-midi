@@ -5,11 +5,15 @@ import Staff from "../../components/Staff/Staff";
 
 export default function MySongsPage ({ userSongs }) {
   const [activeStaff, setActiveStaff] = useState(0);
+  const [activeSong, setActiveSong] = useState(0);
+
+  function playUserSong (evt) {
+    setActiveSong(evt.target.value);
+    showStaff(evt);
+  }
 
   function showStaff (evt) {
-    console.log('showing staff');
     setActiveStaff(evt.target.value);
-    console.log(activeStaff);
   }
 
   return (
@@ -18,10 +22,11 @@ export default function MySongsPage ({ userSongs }) {
         { userSongs.length ? 
           userSongs.map((userSong, idx) => 
             <div className={activeStaff === idx ? "userSingleSongContainerSelected" : "userSingleSongContainerUnselected"}>
-              <div className="userSongInfo">Song {idx + 1}: &nbsp;</div>
+              <div className="userSongInfo"><strong>{idx + 1}</strong> &nbsp;</div>
                 { userSong.map(userSongNote => 
                   <div className="userSongNotes">{userSongNote} &nbsp;</div>
               )}
+              <button value={ idx } className="playUserSongButton" onClick={playUserSong}>{activeSong === idx ? "Pause" : "Play"}</button>
               <button value={ idx } className="showStaffButton" onClick={showStaff}>{activeStaff === idx ? "Hide Staff" : "Show Staff"}</button>
               <div className={activeStaff === idx ? "staffSelected" : "staffUnselected"}><Staff /></div>
             </div>
