@@ -7,6 +7,7 @@ nav {
 
 .welcome {
   font-size: 3vmin;
+  cursor: default;
 }
 
 .header {
@@ -14,10 +15,6 @@ nav {
   font-weight: bold;
   letter-spacing: 0.5vmin;
   margin: 0 0 0 -11vmin;
-}
-
-
-.welcome:hover {
   cursor: default;
 }
 

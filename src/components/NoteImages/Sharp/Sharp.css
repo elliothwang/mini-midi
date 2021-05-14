@@ -4,11 +4,11 @@
 }
 
 .sharpImg > img {
-  height: 9vmin;
+  height: 7.5vmin;
 }
 
 @media only screen and (max-width: 1350px) {
   .sharpImg > img {
-    height: 5.5vmin;
+    height: 7.5vmin;
   }
 }
