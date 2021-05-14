@@ -1,4 +1,4 @@
-.mySongsContainer {
+.userSongsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,10 +6,18 @@
   font-size: 3.5vmin;
 }
 
-.songLine {
+.userSongInfo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 3vmin 0 0 0;
+}
+
+.showStaffButton {
+  background-color: gray;
+}
+
+.userSongStaff {
+  display: none;
 }

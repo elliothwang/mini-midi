@@ -9,7 +9,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   function openSideNav () {
-    document.querySelector(".sideNav").style.width = "250px";
+    document.querySelector(".sideNav").style.width = "200px";
   }
 
   function closeSideNav () {

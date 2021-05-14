@@ -29,6 +29,7 @@
 
 .glowingRed {
   animation: glowingRed 1000ms infinite;
+  pointer-events: none;
 }
 
 .metronome {

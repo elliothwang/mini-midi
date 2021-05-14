@@ -18,7 +18,7 @@ export default function MainPage ({ userSongs, setUserSongs }) {
         userSongs={ userSongs } 
         setUserSongs={ setUserSongs }
       />
-      <Staff note={ note } song={ song } />
+      <Staff note={ note } />
       <Keyboard 
         setNote={ setNote } 
         song={ song } 
