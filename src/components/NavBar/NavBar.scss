@@ -3,6 +3,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  text-align: center;
 }
 
 .header {
@@ -10,6 +11,11 @@ nav {
   font-weight: bold;
   letter-spacing: 0.5vmin;
   cursor: default;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .sideNavOpenButton {
@@ -22,26 +28,25 @@ nav {
   background-color: var(--purple);
   border: 0.31vmin solid black;
   border-radius: 10px;
-}
+  z-index: 10;
 
-.sideNavOpenButtonLine1,
-.sideNavOpenButtonLine2,
-.sideNavOpenButtonLine3 {
-  height: 1vmin;
-  width: 2.5vmin;
-  border-bottom: 0.31vmin solid black;
-}
+  :hover {
+    cursor: pointer;
+  }
 
-.sideNavOpenButtonLine1 {
-  margin: -0.6vmin 0 0 0;
-}
+  div {
+    height: 1vmin;
+    width: 2.5vmin;
+    border-bottom: 0.31vmin solid black;
+  }
 
-.sideNavOpenButtonLine3 {
-  margin: -0.05vmin 0 0 0;
-}
+  .line1 {
+    margin: -0.6vmin 0 0 0;
+  }
 
-.sideNavOpenButton:hover {
-  cursor: pointer;
+  .line3 {
+    margin: -0.05vmin 0 0 0;
+  }
 }
 
 .sideNav {
@@ -55,31 +60,31 @@ nav {
   overflow-x: hidden;
   padding-top: 5vmin;
   transition: 0.5s;
+
+  .link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 3vmin;
+    color: black;
+    display: block;
+    transition: 0.3s;
+
+    :hover {
+      background-color: var(--purple);
+    }
+  }
+
+  div {
+    height: 75%;
+
+    :hover {
+      background-color: var(--blue);
+    }
+  }
 }
 
-.sideNav > * {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 3vmin;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.sideNav > *:hover {
-  background-color: var(--purple);
-}
-
-.spacer {
-  height: 65vmin;
-}
-
-.spacer:hover {
-  background-color: var(--blue);
-}
-
-.sideNavCloseButton:hover {
-  cursor: pointer;
+.active {
+  background-color: var(--pink);
 }
 
 @media screen and (max-height: 480px) {

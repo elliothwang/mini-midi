@@ -16,6 +16,7 @@
   <li>Express</li> 
   <li>React.js</li> 
   <li>Node.js</li>
+  <li>Sass</li>
   <li>jQuery</li>
   <li>Heroku</li>
 

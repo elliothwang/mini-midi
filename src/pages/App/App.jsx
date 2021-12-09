@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
@@ -12,7 +11,7 @@ export default function App() {
   const [userSongs, setUserSongs] = useState([]);
 
   return (
-    <main className="App">
+    <main>
       <>
         <NavBar user={user} setUser={setUser} />
         <Switch>

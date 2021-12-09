@@ -1,4 +1,4 @@
-import './ContentBar.css';
+import './ContentBar.scss';
 import { useState, useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useInterval } from '../../hooks/useInterval';
@@ -71,11 +71,7 @@ export default function ContentBar({
         </button>
         <div className="metronome">
           <button
-            className={
-              isPlaying
-                ? 'playPauseMetronome glowingGreen'
-                : 'playPauseMetronome'
-            }
+            className={isPlaying ? 'glowingGreen' : ''}
             onClick={playPauseMetronome}
           >
             {isPlaying ? 'Pause' : 'Play'}

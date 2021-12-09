@@ -1,0 +1,85 @@
+.mainContainer {
+  margin: 3vmin 0 0 0;
+
+  .contentBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50% auto;
+
+    .record {
+      font-size: 3vmin;
+      background-color: var(--pink);
+    }
+
+    .glowingRed {
+      animation: glowingRed 1000ms infinite;
+      pointer-events: none;
+    }
+
+    @keyframes glowingRed {
+      0% {
+        background-color: #ff0000;
+        box-shadow: 0 0 3px #ff0000;
+      }
+      50% {
+        background-color: #ff6b6b;
+        box-shadow: 0 0 10px #ff6b6b;
+      }
+      100% {
+        background-color: #ff0000;
+        box-shadow: 0 0 3px #ff0000;
+      }
+    }
+  }
+}
+
+.metronome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 6vmin 0;
+
+  button {
+    font-size: 3vmin;
+    margin: 0 0 -6vmin 0;
+    background-color: var(--purple);
+
+    img {
+      margin: 0 0 -0.4vmin 0.7vmin;
+      height: 3vmin;
+    }
+  }
+}
+
+.glowingGreen {
+  animation: glowingGreen 500ms infinite;
+}
+
+@keyframes glowingGreen {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 3px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 10px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 3px #2ba805;
+  }
+}
+
+.noteTrackerSelected {
+  font-size: 3vmin;
+  padding: 0.8vmin;
+  margin: 0 0 0 3vmin;
+  background: var(--blue);
+  border: 1px solid black;
+  border-radius: 0.5vmin;
+}
+
+.noteTrackerUnselected {
+  border: none;
+}

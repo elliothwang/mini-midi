@@ -1,4 +1,4 @@
-import './Staff.css';
+import './Staff.scss';
 import UpwardsQuarterNote from '../NoteImages/UpwardsQuarterNote/UpwardsQuarterNote';
 import Sharp from '../NoteImages/Sharp/Sharp';
 

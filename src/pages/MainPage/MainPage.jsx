@@ -1,4 +1,3 @@
-import './MainPage.css';
 import { useState } from 'react';
 import Staff from '../../components/Staff/Staff';
 import Keyboard from '../../components/Keyboard/Keyboard';
