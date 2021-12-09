@@ -18,19 +18,25 @@ export default function Keyboard({ setNote, song, setSong, isRecording }) {
     }
     playNote(note);
     setNote(note);
-    $(`.${note}`).boxShadow(
+    $(`.${note}`).css(
+      'box-shadow',
       '2px 0 3px rgba(0, 0, 0, 0.1) inset, -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2)'
     );
-    $(`.${note}`).background(
+    $(`.${note}`).css(
+      'background',
       'linear-gradient(to bottom, #fff 0%, #e9e9e9 100%)'
     );
   }
 
   function handleWhiteKeyRelease(note) {
-    $(`.${note}`).boxShadow(
+    $(`.${note}`).css(
+      'box-shadow',
       '-1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset, 0 0 3px rgba(0, 0, 0, 0.2)'
     );
-    $(`.${note}`).background('linear-gradient(to bottom, #eee 0%, #fff 100%)');
+    $(`.${note}`).css(
+      'background',
+      'linear-gradient(to bottom, #eee 0%, #fff 100%)'
+    );
   }
 
   function handleBlackKeyPress(note) {
@@ -39,17 +45,25 @@ export default function Keyboard({ setNote, song, setSong, isRecording }) {
     }
     playNote(note);
     setNote(note);
-    $(`.${note}`).boxShadow(
+    $(`.${note}`).css(
+      'box-shadow',
       '-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5)'
     );
-    $(`.${note}`).background('linear-gradient(to right, #444 0%, #222 100%)');
+    $(`.${note}`).css(
+      'background',
+      'linear-gradient(to right, #444 0%, #222 100%)'
+    );
   }
 
   function handleBlackKeyRelease(note) {
-    $(`.${note}`).boxShadow(
+    $(`.${note}`).css(
+      'box-shadow',
       '-1px -1px 2px rgba(255, 255, 255, 0.2) inset, 0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5)'
     );
-    $(`.${note}`).background('linear-gradient(45deg, #222 0%, #555 100%)');
+    $(`.${note}`).css(
+      'background',
+      'linear-gradient(45deg, #222 0%, #555 100%)'
+    );
   }
 
   function handleKeyDown(evt) {
