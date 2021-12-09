@@ -6,9 +6,3 @@
 .sharpImg > img {
   height: 7.5vmin;
 }
-
-@media only screen and (max-width: 1350px) {
-  .sharpImg > img {
-    height: 7.5vmin;
-  }
-}

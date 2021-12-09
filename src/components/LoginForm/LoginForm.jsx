@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LogIn({ setUser }) {
+export default function LogIn({ setUser, setShowSignUp }) {
   const [credentials, setCredentials] = useState({
     email: '',
-    password: ''
+    password: '',
   });
   const [error, setError] = useState('');
 
@@ -26,13 +26,34 @@ export default function LogIn({ setUser }) {
   return (
     <div>
       <div className="form-container" onSubmit={handleSubmit}>
-        <form autoComplete="off" >
+        <form autoComplete="off">
           <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
+          <input
+            type="text"
+            name="email"
+            value={credentials.email}
+            onChange={handleChange}
+            required
+          />
           <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
+          <input
+            type="password"
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+            required
+          />
         </form>
+        <div
+          className="flex-ctr-ctr"
+          style={{
+            fontSize: '2vmin',
+            paddingTop: '3vmin',
+          }}
+        >
+          <div>New here?</div>
+          <button onClick={() => setShowSignUp(true)}>Sign Up</button>
+        </div>
       </div>
       <p className="error-message">&nbsp;{error}</p>
     </div>

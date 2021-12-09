@@ -5,16 +5,10 @@ nav {
   overflow: hidden;
 }
 
-.welcome {
-  font-size: 3vmin;
-  cursor: default;
-}
-
 .header {
-  font-size: 6vmin;
+  font-size: 3.5vmin;
   font-weight: bold;
   letter-spacing: 0.5vmin;
-  margin: 0 0 0 -11vmin;
   cursor: default;
 }
 
@@ -23,17 +17,19 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 5vmin;
-  width: 5vmin;
-  background-color: #E2D9D1;
-  border: 0.4vmin solid black;
+  height: 4vmin;
+  width: 4vmin;
+  background-color: var(--purple);
+  border: 0.31vmin solid black;
   border-radius: 10px;
 }
 
-.sideNavOpenButtonLine1, .sideNavOpenButtonLine2, .sideNavOpenButtonLine3 {
-  height: 1.2vmin;
-  width: 3vmin;
-  border-bottom: 0.4vmin solid black;
+.sideNavOpenButtonLine1,
+.sideNavOpenButtonLine2,
+.sideNavOpenButtonLine3 {
+  height: 1vmin;
+  width: 2.5vmin;
+  border-bottom: 0.31vmin solid black;
 }
 
 .sideNavOpenButtonLine1 {
@@ -55,7 +51,7 @@ nav {
   z-index: 3;
   top: 0;
   right: 0;
-  background-color: #E2D9D1;
+  background-color: var(--blue);
   overflow-x: hidden;
   padding-top: 5vmin;
   transition: 0.5s;
@@ -71,7 +67,7 @@ nav {
 }
 
 .sideNav > *:hover {
-  background-color: white;
+  background-color: var(--purple);
 }
 
 .spacer {
@@ -79,45 +75,14 @@ nav {
 }
 
 .spacer:hover {
-  background-color: #E2D9D1;
+  background-color: var(--blue);
 }
 
 .sideNavCloseButton:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1350px) {
-  .welcome {
-    font-size: 2.5vmin;
-  }
-
-  .header {
-    font-size: 3.5vmin;
-    margin: 0 0 0 -9vmin;
-  }
-
-  .sideNavOpenButton {
-    height: 4vmin;
-    width: 4vmin;
-    border: 0.31vmin solid black;
-  }
-
-  .sideNavOpenButtonLine1, .sideNavOpenButtonLine2, .sideNavOpenButtonLine3 {
-    height: 1vmin;
-    width: 2.5vmin;
-    border-bottom: 0.31vmin solid black;
-  }
-  
-  .sideNavOpenButtonLine1 {
-    margin: -0.6vmin 0 0 0;
-  }
-  
-  .sideNavOpenButtonLine3 {
-    margin: -0.05vmin 0 0 0;
-  }
-}
-
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 480px) {
   .sideNav {
     padding-top: 15px;
   }

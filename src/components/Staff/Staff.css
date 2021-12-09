@@ -6,25 +6,6 @@
   margin: 5vmin 0 5vmin 0;
 }
 
-/* .trebleClefImgContainer {
-  width: 90%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0 0 -40.1vmin -3.2vmin;
-  mix-blend-mode: multiply;
-}
-
-.trebleClefImg {
-  height: 75vmin;
-  width: 27vmin;
-  background-image: url('https://toppng.com/uploads/preview/treble-clef-11552767864mvdst1kg5w.png');
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  mix-blend-mode: multiply;
-} */
-
 .songTracker {
   font-size: 3vmin;
   margin: 0 0 1vmin 0;
@@ -32,15 +13,17 @@
 
 .staff {
   display: grid;
-  grid-template-areas: "ENoteContainer"
-                       "DNoteContainer"
-                       "CNoteContainer"
-                       "BNoteContainer"
-                       "ANoteContainer"
-                       "GNoteContainer"
-                       "FNoteContainer";
-  height: 28vmin;
-  width: 138vmin;
+  grid-template-areas:
+    'ENoteContainer'
+    'DNoteContainer'
+    'CNoteContainer'
+    'BNoteContainer'
+    'ANoteContainer'
+    'GNoteContainer'
+    'FNoteContainer';
+  height: 20vmin;
+  width: 91vmin;
+  background: linear-gradient(to bottom, #eee 0%, #fff 100%);
   border: 1px solid black;
   z-index: 2;
 }
@@ -56,15 +39,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 28vmin;
-  width: 138vmin;
-  margin: -31.4vmin 0 0 0;
+  height: 20vmin;
+  width: 91vmin;
+  margin: -24.5vmin 0 0 0;
   z-index: 1;
 }
 
 .line {
-  height: 7vmin;
-  width: 138vmin;
+  height: 5vmin;
+  width: 90.9vmin;
   border-bottom: 0.01vmin solid black;
   z-index: 1;
 }
@@ -119,69 +102,4 @@
 
 .notPlayed {
   display: none;
-}
-
-
-@media only screen and (max-width: 1350px) {
-  .staff {
-    height: 28vmin;
-    width: 91vmin;
-    margin: 0 0 -4vmin 0;
-  }
-
-  .staffLines {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 28vmin;
-    width: 91vmin;
-    margin: -30.5vmin 0 0 0;
-    z-index: 1;
-  }
-
-  .line {
-    height: 7vmin;
-    width: 90.9vmin;
-  }
-
-  .ENoteContainer {
-    grid-area: ENoteContainer;
-    height: 5vmin;
-  }
-  
-  .DNoteContainer {
-    grid-area: DNoteContainer;
-    height: 2vmin;
-    margin: -1vmin 0 0 0;
-  }
-  
-  .CNoteContainer {
-    grid-area: CNoteContainer;
-    height: 5vmin;
-    margin: -1vmin 0 0 0;
-  }
-  
-  .BNoteContainer {
-    grid-area: BNoteContainer;
-    height: 1vmin;
-    margin: -2vmin 0 0 0;
-  }
-  
-  .ANoteContainer {
-    grid-area: ANoteContainer;
-    height: 3vmin;
-  }
-  
-  .GNoteContainer {
-    grid-area: GNoteContainer;
-    height: 2vmin;
-    margin: 0 0 -3vmin 0;
-  }
-  
-  .FNoteContainer {
-    grid-area: FNoteContainer;
-    height: 6vmin;
-    margin: 0 0 -1vmin 0;
-  }
 }

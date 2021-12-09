@@ -11,8 +11,8 @@
 .keyboard {
   display: flex;
   justify-content: center;
-  height: 60vmin;
-  width: 138vmin;
+  height: 40vmin;
+  width: 91vmin;
 }
 
 .key {
@@ -23,17 +23,17 @@
   position: relative;
   cursor: pointer;
   outline: none;
-  font-size: 5vmin;
+  font-size: 4vmin;
   padding: 0 0 5vmin 0;
 }
 
 .white {
-  height: 60vmin;
-  width: 20vmin;
+  height: 40vmin;
+  width: 13.2vmin;
   color: black;
   z-index: 1;
   border: 1px solid #aaaaaa;
-  border-radius: 0 0 2.5vmin 2.5vmin;
+  border-radius: 0 0 2vmin 2vmin;
   box-shadow: -1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset,
     0 0 3px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #eee 0%, #fff 100%);
@@ -49,8 +49,8 @@
 }
 
 .black {
-  height: 36vmin;
-  width: 12vmin;
+  height: 20vmin;
+  width: 8.5vmin;
   color: white;
   z-index: 2;
   border: 1px solid black;
@@ -72,7 +72,7 @@
 .E,
 .G,
 .black {
-  margin: 0 0 0 -6vmin;
+  margin: 0 0 0 -4.3vmin;
 }
 
 .C {
@@ -81,45 +81,4 @@
 
 .F {
   margin: 0 0 0 -0.2vmin;
-}
-
-@media only screen and (max-width: 1350px) {
-  .keyboard {
-    display: flex;
-    justify-content: center;
-    height: 50vmin;
-    width: 91vmin;
-  }
-
-  .key {
-    font-size: 4vmin;
-  }
-
-  .white {
-    height: 50vmin;
-    width: 13.2vmin;
-    border-radius: 0 0 2vmin 2vmin;
-  }
-  
-  .black {
-    height: 30vmin;
-    width: 8.5vmin;
-  }
-
-  .A,
-  .B,
-  .D,
-  .E,
-  .G,
-  .black {
-    margin: 0 0 0 -4.3vmin;
-  }
-
-  .C {
-    margin: 0 0 3vmin 0;
-  }
-
-  .F {
-    margin: 0 0 0 -0.2vmin;
-  }
 }

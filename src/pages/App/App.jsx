@@ -13,25 +13,21 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ? 
-        <>
-          <NavBar user={ user } setUser={ setUser } />
-          <Switch>
-            <Route path="/songs">
-              <MySongsPage userSongs={ userSongs }/>
-            </Route>
-            <Route path="/">
-              <MainPage 
-                userSongs={ userSongs } 
-                setUserSongs = { setUserSongs } 
-              />
-            </Route>
-            <Redirect to="/" />
-          </Switch>
-        </>
-        :
-        <AuthPage setUser={ setUser } />
-      }
+      <>
+        <NavBar user={user} setUser={setUser} />
+        <Switch>
+          <Route path="/auth">
+            <AuthPage setUser={setUser} />
+          </Route>
+          <Route path="/songs">
+            <MySongsPage userSongs={userSongs} />
+          </Route>
+          <Route path="/">
+            <MainPage userSongs={userSongs} setUserSongs={setUserSongs} />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </>
     </main>
   );
 }

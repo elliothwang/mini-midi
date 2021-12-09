@@ -5,11 +5,5 @@
 }
 
 .downwardsQuarterNoteImg > img {
-  height: 18vmin;
-}
-
-@media only screen and (max-width: 1350px) {
-  .downwardsQuarterNoteImg > img {
-    height: 13vmin;
-  }
+  height: 13vmin;
 }

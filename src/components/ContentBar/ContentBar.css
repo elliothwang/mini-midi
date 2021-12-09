@@ -10,9 +10,9 @@
 }
 
 .record {
-  font-size: 5vmin;
-  background-color: red;
-  margin: 0 5vmin 0 0;
+  font-size: 3vmin;
+  background-color: var(--pink);
+  margin: 0 2vmin 0 0;
 }
 
 @keyframes glowingRed {
@@ -43,17 +43,17 @@
 }
 
 .metronome > * {
-  font-size: 5vmin;
+  font-size: 3vmin;
   margin: 0 0 -6vmin 0;
 }
 
 .playPauseMetronome {
-  background-color: green;
+  background-color: var(--purple);
 }
 
 .playPauseMetronome > img {
-  margin: 0 0 -1vmin 0.7vmin;
-  height: 5.6vmin;
+  margin: 0 0 -0.4vmin 0.7vmin;
+  height: 3vmin;
 }
 
 @keyframes glowingGreen {
@@ -76,43 +76,14 @@
 }
 
 .noteTrackerSelected {
-  font-size: 5vmin;
+  font-size: 3vmin;
   padding: 0.8vmin;
-  margin: 0 0 0 5vmin;
+  margin: 0 0 0 3vmin;
+  background: var(--blue);
   border: 1px solid black;
   border-radius: 0.5vmin;
 }
 
 .noteTrackerUnselected {
   border: none;
-}
-
-@media only screen and (max-width: 1350px) {
-  .contentBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50% auto;
-    margin: 0 0 -4vmin 0;
-  }
-  
-  .record {
-    font-size: 3vmin;
-    margin: 0 2vmin 0 0;
-  }
-  
-  .metronome > * {
-    font-size: 3vmin;
-    margin: 0 0 -6vmin 0;
-  }
-
-  .playPauseMetronome > img {
-    margin: 0 0 -0.4vmin 0.7vmin;
-    height: 3vmin;
-  }
-  
-  .noteTrackerSelected {
-    font-size: 3vmin;
-    margin: 0 0 0 3vmin;
-  }
 }

@@ -7,7 +7,6 @@
 <img src="https://i.imgur.com/i2ggrFe.png" /> </br>
 <img src="https://i.imgur.com/2TayzeQ.png" /> </br>
 
-
 <h1>Technologies Used:</h1>
   <li>HTML</li>
   <li>CSS</li>
@@ -15,14 +14,17 @@
   <li>Mongoose</li> 
   <li>Mongodb</li> 
   <li>Express</li> 
-  <li>React</li> 
-  <li>Node.js</li> 
+  <li>React.js</li> 
+  <li>Node.js</li>
+  <li>jQuery</li>
+  <li>Heroku</li>
 
 <h1>Getting Started:</h1>
-https://trello.com/b/K8NLvCu6/ga-project-4 <br/>
-https://mini-midi.herokuapp.com/
+<a href="https://trello.com/b/K8NLvCu6/ga-project-4">Trello</a> <br/>
+<a href="https://github.com/elliothwang/mini-midi">Github</a> <br/>
+<a href="https://mini-midi.herokuapp.com/">Demo</a> <br/>
 
 <h1>Next Steps:</h1>
-  1. Add CRUD functionality <br/>
+  1. Allow CRUD functionality.
   2. Allow users to playback their own songs. <br/>
   3. Record multi-note songs. <br/>

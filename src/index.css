@@ -14,28 +14,30 @@ code {
 
 /* CSS Custom Properties */
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --white: #ffffff;
+  --black: black;
+  --light-gray: #ccd7e4;
+  --gray: #828a95;
+  --blue: #ceeaf7;
+  --purple: #d5c9df;
+  --pink: #dcb8cb;
+  --red: red;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-2);
+  background-color: var(--light-gray);
   padding: 2vmin;
   height: 100vh;
 }
@@ -79,28 +81,15 @@ code {
   overflow-y: scroll;
 }
 
-.section-heading {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--tan-1);
-  color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-  padding: .6vmin;
-  text-align: center;
-  font-size: 2vmin;
-}
-
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--pink);
+  border: 0.1vmin solid var(--pink);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--red);
   text-align: center;
 }
 
@@ -108,7 +97,7 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: var(--black);
 }
 
 label {
@@ -120,48 +109,50 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
-  border-radius: .5vmin;
-  color: var(--text-dark);
+  border: 0.1vmin solid var(--white);
+  border-radius: 0.5vmin;
+  color: var(black);
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--black);
 }
 
-button, a.button {
+button,
+a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  /* background-color: var(--orange); */
+  color: var(--black);
+  background-color: var(--blue);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--blue);
+  border-radius: 0.5vmin;
   outline: none;
   cursor: pointer;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
+  padding: 0.6vmin 0.8vmin;
 }
 
 button.btn-xs {
   font-size: 1vmin;
-  padding: .4vmin .5vmin;
+  padding: 0.4vmin 0.5vmin;
 }
 
-button:disabled, form:invalid button[type="submit"] {
+button:disabled,
+form:invalid button[type='submit'] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--purple);
 }
 
-button[type="submit"] {
+button[type='submit'] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
