@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LogIn({ setUser, setShowSignUp }) {
+export default function LogIn({ setUser, setShowSignUp, handleAuthClick }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -25,8 +25,11 @@ export default function LogIn({ setUser, setShowSignUp }) {
 
   return (
     <div>
+      <div className="authExit" onClick={handleAuthClick}>
+        X
+      </div>
       <div className="form-container" onSubmit={handleSubmit}>
-        <form autoComplete="off">
+        <form autoComplete="off" style={{ marginTop: '1vmin' }}>
           <label>Email</label>
           <input
             type="text"

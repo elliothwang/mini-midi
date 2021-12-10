@@ -4,6 +4,8 @@ import '../../components/Staff/Staff.scss';
 import Staff from '../../components/Staff/Staff';
 // import * as songsAPI from "../../utilities/songs-api";
 
+// TODO: refactor css;
+// TODO: add CRUD functionality
 export default function MySongsPage({ userSongs }) {
   const [activeStaff, setActiveStaff] = useState(0);
   const [activeSong, setActiveSong] = useState(0);

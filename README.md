@@ -26,6 +26,5 @@
 <a href="https://mini-midi.herokuapp.com/">Demo</a> <br/>
 
 <h1>Next Steps:</h1>
-  1. Allow CRUD functionality.
-  2. Allow users to playback their own songs. <br/>
-  3. Record multi-note songs. <br/>
+  1. Allow users to playback their own songs. <br/>
+  2. Record multi-note songs. <br/>

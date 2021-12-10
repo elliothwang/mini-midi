@@ -39,8 +39,15 @@ export default class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <div>
+        <div className="authExit" onClick={this.props.handleAuthClick}>
+          X
+        </div>
         <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <form
+            autoComplete="off"
+            style={{ marginTop: '1vmin' }}
+            onSubmit={this.handleSubmit}
+          >
             <label>Name</label>
             <input
               type="text"

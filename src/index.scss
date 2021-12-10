@@ -38,6 +38,16 @@ body {
   align-items: center;
 }
 
+.authExit {
+  position: absolute;
+  margin: 1vmin 0 0 1vmin;
+  padding: 0 0.5vmin;
+  font-size: 2.25vmin;
+  cursor: pointer;
+  border: 0.1vmin solid black;
+  border-radius: 50%;
+}
+
 .form-container {
   padding: 3vmin;
   background-color: var(--pink);
