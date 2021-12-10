@@ -49,13 +49,12 @@
 
 .ENoteContainer {
   grid-area: ENoteContainer;
-  height: 3vmin;
+  height: 2vmin;
 }
 
 .DNoteContainer {
   grid-area: DNoteContainer;
-  height: 3vmin;
-  margin: -1vmin 0 0 0;
+  height: 5vmin;
 }
 
 .CNoteContainer {
@@ -65,7 +64,7 @@
 
 .BNoteContainer {
   grid-area: BNoteContainer;
-  height: 4vmin;
+  height: 3vmin;
 }
 
 .ANoteContainer {
