@@ -40,12 +40,15 @@ body {
 
 .authExit {
   position: absolute;
-  margin: 1vmin 0 0 1vmin;
+  top: 1vmin;
+  left: 1vmin;
+  color: black;
   padding: 0 0.5vmin;
   font-size: 2.25vmin;
-  cursor: pointer;
   border: 0.1vmin solid black;
   border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .form-container {

@@ -97,6 +97,7 @@ export default function NavBar({ user, setUser }) {
         {user ? (
           <NavLink
             to=""
+            exact
             className="link"
             activeClassName="active"
             onClick={handleLogOut}
@@ -109,6 +110,7 @@ export default function NavBar({ user, setUser }) {
         ) : (
           <NavLink
             to=""
+            exact
             className="link"
             activeClassName="active"
             onClick={handleAuthClick}

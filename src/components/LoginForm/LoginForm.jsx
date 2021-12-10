@@ -25,9 +25,9 @@ export default function LogIn({ setUser, setShowSignUp, handleAuthClick }) {
 
   return (
     <div>
-      <div className="authExit" onClick={handleAuthClick}>
+      <a href="/" className="authExit" onClick={handleAuthClick}>
         X
-      </div>
+      </a>
       <div className="form-container" onSubmit={handleSubmit}>
         <form autoComplete="off" style={{ marginTop: '1vmin' }}>
           <label>Email</label>
