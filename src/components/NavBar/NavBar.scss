@@ -83,13 +83,12 @@ nav {
     margin: -0.6vmin 0 0 0;
   }
 
-  // TODO: change px to vmin;
   .active1 {
-    -webkit-transform: translate(3px) translateY(12px) rotateZ(45deg);
-    -moz-transform: translate(3px) translateY(12px) rotateZ(45deg);
-    -ms-transform: translate(3px) translateY(12px) rotateZ(45deg);
-    -o-transform: translate(3px) translateY(12px) rotateZ(45deg);
-    transform: translate(3px) translateY(12px) rotateZ(45deg);
+    -webkit-transform: translate(0.25vmin) translateY(1.1vmin) rotateZ(45deg);
+    -moz-transform: translate(0.25vmin) translateY(1.1vmin) rotateZ(45deg);
+    -ms-transform: translate(0.25vmin) translateY(1.1vmin) rotateZ(45deg);
+    -o-transform: translate(0.25vmin) translateY(1.1vmin) rotateZ(45deg);
+    transform: translate(0.25vmin) translateY(1.1vmin) rotateZ(45deg);
   }
 
   .active2 {
@@ -101,11 +100,12 @@ nav {
   }
 
   .active3 {
-    -webkit-transform: translate(-2px) translateY(-10px) rotateZ(-45deg);
-    -moz-transform: translate(-2px) translateY(-10px) rotateZ(-45deg);
-    -ms-transform: translate(-2px) translateY(-10px) rotateZ(-45deg);
-    -o-transform: translate(-2px) translateY(-10px) rotateZ(-45deg);
-    transform: translate(-2px) translateY(-10px) rotateZ(-45deg);
+    -webkit-transform: translate(-0.275vmin) translateY(-0.8vmin)
+      rotateZ(-45deg);
+    -moz-transform: translate(-0.275vmin) translateY(-0.8vmin) rotateZ(-45deg);
+    -ms-transform: translate(-0.275vmin) translateY(-0.8vmin) rotateZ(-45deg);
+    -o-transform: translate(-0.275vmin) translateY(-0.8vmin) rotateZ(-45deg);
+    transform: translate(-0.275vmin) translateY(-0.8vmin) rotateZ(-45deg);
   }
 }
 
