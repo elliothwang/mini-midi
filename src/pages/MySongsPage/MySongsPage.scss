@@ -1,84 +1,66 @@
-// TODO: refactor css;
-
-.userSongsContainer {
+.songsPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3.5vmin;
-  margin: 3vmin 0 0 0;
-}
+  width: 90vmin;
+  margin: 0 auto;
 
-.userSingleSongContainerSelected {
-  position: relative;
-  height: 44vmin;
-  width: 138vmin;
-}
+  .song {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 28vmin;
+    width: 90vw;
+    margin-top: 2vmin;
 
-.userSingleSongContainerUnselected {
-  position: relative;
-  height: 20vmin;
-  width: 138vmin;
-}
+    .songHeader {
+      position: relative;
+      text-align: center;
+      height: 4vmin;
+      width: 90vw;
+      background: var(--light-black);
+      border-radius: 1vmin;
 
-.userSongInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 138vmin;
-  height: 6vmin;
-  margin: 3vmin 0 0 0;
-  background-color: slategray;
-  border-radius: 10px;
-}
+      .songTitle {
+        font-size: 3vmin;
+        color: var(--off-white);
+      }
 
-.userSongNotes {
-  font-size: 3vmin;
-  display: inline;
-}
+      .blue {
+        color: var(--blue);
+      }
 
-.playUserSongButton {
-  top: 2.7vmin;
-  left: 0;
-  position: absolute;
-  background-color: #968c84;
-}
+      .purple {
+        color: var(--purple);
+      }
+    }
 
-.showStaffButton {
-  top: 2.7vmin;
-  right: 0;
-  position: absolute;
-  background-color: #968c84;
-}
+    .mainSec {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 24vmin;
 
-.staffSelected {
-  display: block;
-  margin: -3vmin 0 0 0;
-}
+      .playbutton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3vmin;
+        width: 3vmin;
+        margin-bottom: -2vmin;
+        margin-left: -86vmin;
+        background: var(--pink);
+        border-radius: 50%;
+        z-index: 2;
+        cursor: pointer;
+      }
 
-.staffUnselected {
-  display: none;
-}
-
-@media only screen and (max-width: 1350px) {
-  .userSongsContainer {
-    margin: 0;
-  }
-
-  .userSingleSongContainerSelected {
-    width: 91vmin;
-  }
-
-  .userSingleSongContainerUnselected {
-    width: 91vmin;
-  }
-
-  .userSongInfo {
-    width: 91vmin;
-  }
-
-  .userSongNotes {
-    font-size: 2.5vmin;
-    display: inline;
+      .songStaff {
+        margin: auto;
+      }
+    }
   }
 }

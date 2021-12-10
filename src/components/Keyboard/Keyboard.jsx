@@ -2,7 +2,7 @@ import './Keyboard.scss';
 import $ from 'jquery';
 import playNote from '../../utilities/playNote';
 
-// TODO: disable keyboard on auth/songs page
+// TODO: disable keyboard on auth/songs page;
 export default function Keyboard({ setNote, song, setSong, isRecording }) {
   function handlePianoClick(evt) {
     if (isRecording) {

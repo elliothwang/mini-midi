@@ -5,7 +5,7 @@ nav {
   height: 7.5vh;
   overflow: hidden;
   text-align: center;
-  background-color: #232b2b;
+  background: var(--light-black);
 }
 
 .popup {
@@ -54,7 +54,7 @@ nav {
   right: 5vw;
   height: 4vmin;
   width: 4vmin;
-  background-color: var(--off-white);
+  background: var(--off-white);
   border: 0.1vmin solid black;
   border-radius: 10px;
   z-index: 5;
@@ -147,7 +147,7 @@ nav {
   z-index: 5;
   top: 0;
   right: 0;
-  background-color: var(--off-white);
+  background: var(--off-white);
   overflow-x: hidden;
   padding-top: 5vmin;
   -webkit-transition: all 0.75s ease;
@@ -175,7 +175,7 @@ nav {
     height: 75%;
 
     :hover {
-      background-color: var(--blue);
+      background: var(--blue);
     }
   }
 }

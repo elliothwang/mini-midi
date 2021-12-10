@@ -3,9 +3,10 @@
   Have you ever needed to jot down a quick melody you've through of in your head? Use mini midi to make & save that melody so you'll never forget a melody again! If you need to brush up on your sight-reading, you can also do that here. If you just wanted to mess around on a keyboard, you've come to the right place! Try it out!
 
 <h1>Screenshots:</h1>
-<img src="https://i.imgur.com/87m5F5v.png" /> </br>
-<img src="https://i.imgur.com/i2ggrFe.png" /> </br>
-<img src="https://i.imgur.com/2TayzeQ.png" /> </br>
+<h3>Home Page</h3>
+<img src="/assets/Images/home.png?raw=true" alt="home page"/> </br>
+<h3>Side Navbar</h3>
+<img src="/assets/Images/nav.png?raw=true" alt="nav shown" /> </br>
 
 <h1>Technologies Used:</h1>
   <li>HTML</li>

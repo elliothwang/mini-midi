@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   height: 40vmin;
-  width: 91vmin;
+  width: 90vmin;
 
   button {
     display: flex;
@@ -17,7 +17,6 @@
     align-items: flex-end;
     float: left;
     position: relative;
-    cursor: pointer;
     outline: none;
     font-size: 4vmin;
     padding: 0 0 5vmin 0;
@@ -25,7 +24,7 @@
 
   .white {
     height: 40vmin;
-    width: 13.2vmin;
+    width: 13vmin;
     color: black;
     z-index: 1;
     border: 1px solid #aaaaaa;

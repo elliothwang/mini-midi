@@ -1,12 +1,13 @@
 import './MySongsPage.scss';
 import { useEffect, useState } from 'react';
-import '../../components/Staff/Staff.scss';
 import Staff from '../../components/Staff/Staff';
+import { ReactComponent as Play } from '../../assets/Icons/play.svg';
+import { ReactComponent as Pause } from '../../assets/Icons/pause.svg';
+
 // import * as songsAPI from "../../utilities/songs-api";
 
-// TODO: add CRUD functionality
-export default function MySongsPage({ userSongs }) {
-  const [activeStaff, setActiveStaff] = useState(0);
+// TODO: add CRUD functionality;
+export default function MySongsPage({ songs }) {
   const [activeSong, setActiveSong] = useState(0);
 
   // useEffect(() => {
@@ -16,57 +17,37 @@ export default function MySongsPage({ userSongs }) {
   //   index();
   // }, []);
 
-  function playUserSong(evt) {
+  function playSong(evt) {
     setActiveSong(evt.target.value);
-    showStaff(evt);
-  }
-
-  function showStaff(evt) {
-    setActiveStaff(evt.target.value);
   }
 
   return (
-    <div className="mySongsPage">
-      <div className="userSongsContainer">
-        {userSongs.length
-          ? userSongs.map((userSong, idx) => (
+    <div>
+      <div className="songsPage">
+        {songs.map((song, idx) => (
+          <div className="song">
+            <div className="songHeader">
               <div
                 className={
-                  activeStaff === idx
-                    ? 'userSingleSongContainerSelected'
-                    : 'userSingleSongContainerUnselected'
+                  idx % 2 === 0 ? 'songTitle blue' : 'songTitle purple'
                 }
               >
-                <div className="userSongInfo">
-                  <strong>{idx + 1}</strong> &nbsp;
-                </div>
-                {userSong.map((userSongNote) => (
-                  <div className="userSongNotes">{userSongNote} &nbsp;</div>
-                ))}
-                <button
-                  value={idx}
-                  className="playUserSongButton"
-                  onClick={playUserSong}
-                >
-                  {activeSong === idx ? 'Pause' : 'Play'}
-                </button>
-                <button
-                  value={idx}
-                  className="showStaffButton"
-                  onClick={showStaff}
-                >
-                  {activeStaff === idx ? 'Hide Staff' : 'Show Staff'}
-                </button>
-                <div
-                  className={
-                    activeStaff === idx ? 'staffSelected' : 'staffUnselected'
-                  }
-                >
-                  <Staff />
-                </div>
+                {idx + 1}
               </div>
-            ))
-          : 'No songs yet!'}
+            </div>
+            <div className="mainSec">
+              {/* {song.map((notes) => (
+                <div className="songNotes">{notes}</div>
+              ))} */}
+              <div className="playbutton" value={idx} onClick={playSong}>
+                {activeSong ? <Pause /> : <Play />}
+              </div>
+              <div className="songStaff">
+                <Staff />
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

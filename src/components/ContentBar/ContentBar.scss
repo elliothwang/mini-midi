@@ -9,7 +9,7 @@
 
     .record {
       font-size: 3vmin;
-      background-color: var(--pink);
+      background: var(--pink);
 
       div {
         height: 3vmin;
@@ -24,15 +24,15 @@
 
     @keyframes glowingRed {
       0% {
-        background-color: #ff0000;
+        background: #ff0000;
         box-shadow: 0 0 3px #ff0000;
       }
       50% {
-        background-color: #ff6b6b;
+        background: #ff6b6b;
         box-shadow: 0 0 10px #ff6b6b;
       }
       100% {
-        background-color: #ff0000;
+        background: #ff0000;
         box-shadow: 0 0 3px #ff0000;
       }
     }
@@ -48,7 +48,7 @@
   button {
     font-size: 3vmin;
     margin: 0 0 -6vmin 0;
-    background-color: var(--blue);
+    background: var(--blue);
 
     div {
       height: 3vmin;
@@ -63,15 +63,15 @@
 
 @keyframes glowingGreen {
   0% {
-    background-color: #2ba805;
+    background: #2ba805;
     box-shadow: 0 0 3px #2ba805;
   }
   50% {
-    background-color: #49e819;
+    background: #49e819;
     box-shadow: 0 0 10px #49e819;
   }
   100% {
-    background-color: #2ba805;
+    background: #2ba805;
     box-shadow: 0 0 3px #2ba805;
   }
 }

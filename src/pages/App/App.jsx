@@ -7,7 +7,7 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [userSongs, setUserSongs] = useState([]);
+  const [userSongs, setUserSongs] = useState([['A'], ['A']]);
 
   return (
     <main>
@@ -15,7 +15,7 @@ export default function App() {
         <NavBar user={user} setUser={setUser} />
         <Switch>
           <Route path="/songs">
-            <MySongsPage userSongs={userSongs} />
+            <MySongsPage songs={userSongs} />
           </Route>
           <Route path="/">
             <MainPage userSongs={userSongs} setUserSongs={setUserSongs} />
