@@ -2,19 +2,32 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 7.5vh;
   overflow: hidden;
   text-align: center;
+  background-color: var(--gray);
 }
 
 .header {
   font-size: 3.5vmin;
   font-weight: bold;
-  letter-spacing: 0.5vmin;
+  letter-spacing: 0.25vmin;
+  margin-left: 5vw;
   cursor: default;
 
   a {
     text-decoration: none;
-    color: black;
+    color: var(--white);
+
+    .pink {
+      color: var(--pink);
+    }
+    .purple {
+      color: var(--purple);
+    }
+    .blue {
+      color: var(--blue);
+    }
   }
 }
 
@@ -25,9 +38,10 @@ nav {
   align-items: center;
   height: 4vmin;
   width: 4vmin;
-  background-color: var(--purple);
+  background-color: var(--blue);
   border: 0.31vmin solid black;
   border-radius: 10px;
+  margin-right: 5vw;
   z-index: 10;
 
   :hover {

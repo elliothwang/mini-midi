@@ -20,7 +20,10 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       <div className="header">
-        <a href="/">mini midi</a>
+        <a href="/">
+          m<span className="pink">i</span>n<span className="purple">i</span> m
+          <span className="blue">i</span>d<span className="pink">i</span>
+        </a>
       </div>
       <div className="sideNavOpenButton" onClick={openSideNav}>
         <div className="line1"></div>

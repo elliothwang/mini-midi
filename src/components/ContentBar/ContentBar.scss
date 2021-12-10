@@ -1,5 +1,5 @@
 .mainContainer {
-  margin: 3vmin 0 0 0;
+  margin: 1vmin 0 -4vmin 0;
 
   .contentBar {
     display: flex;
@@ -74,7 +74,7 @@
 .noteTrackerSelected {
   font-size: 3vmin;
   padding: 0.8vmin;
-  margin: 0 0 0 3vmin;
+  margin: 0 0 0 1vmin;
   background: var(--blue);
   border: 1px solid black;
   border-radius: 0.5vmin;
