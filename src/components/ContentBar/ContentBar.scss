@@ -10,6 +10,11 @@
     .record {
       font-size: 3vmin;
       background-color: var(--pink);
+
+      div {
+        height: 3vmin;
+        width: 3vmin;
+      }
     }
 
     .glowingRed {
@@ -45,9 +50,9 @@
     margin: 0 0 -6vmin 0;
     background-color: var(--blue);
 
-    img {
-      margin: 0 0 -0.4vmin 0.7vmin;
+    div {
       height: 3vmin;
+      width: 3vmin;
     }
   }
 }
