@@ -4,9 +4,9 @@
 
 <h1>Screenshots:</h1>
 <h3>Home Page</h3>
-<img src="/assets/Images/home.png?raw=true" alt="home page"/> </br>
+  <img src="src/assets/Images/home.png?raw=true" alt="home page"/> </br>
 <h3>Side Navbar</h3>
-<img src="/assets/Images/nav.png?raw=true" alt="nav shown" /> </br>
+  <img src="/Images/nav.png?raw=true" alt="nav shown" /> </br>
 
 <h1>Technologies Used:</h1>
   <li>HTML</li>
