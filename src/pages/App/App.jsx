@@ -9,6 +9,7 @@ import MySongsPage from '../MySongsPage/MySongsPage';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [userSongs, setUserSongs] = useState([]);
+  const [keyboardActive, setKeyboardActive] = useState(true);
 
   return (
     <main>

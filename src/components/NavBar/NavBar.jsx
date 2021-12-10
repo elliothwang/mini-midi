@@ -1,20 +1,34 @@
 import './NavBar.scss';
+import { useState } from 'react';
 import $ from 'jquery';
 import { NavLink } from 'react-router-dom';
+import { ReactComponent as House } from '../../assets/Icons/house.svg';
+import { ReactComponent as SongList } from '../../assets/Icons/song-list.svg';
+import { ReactComponent as Key } from '../../assets/Icons/key.svg';
 import * as userService from '../../utilities/users-service';
 
 export default function NavBar({ user, setUser }) {
+  const [sideNavShown, setSideNavShown] = useState(false);
+
   function handleLogOut() {
     userService.logOut();
     setUser(null);
   }
 
-  function openSideNav() {
-    $('.sideNav').width('225px');
+  function handleSideNavClick() {
+    setSideNavShown(!sideNavShown);
+    if (sideNavShown) {
+      $('.sideNav').width('0px');
+      $('.spacer').width('0px');
+    } else {
+      $('.sideNav').width('300px');
+      $('.spacer').width('300px');
+    }
   }
 
   function closeSideNav() {
-    $('.sideNav').width('0px');
+    setSideNavShown(false);
+    handleSideNavClick();
   }
 
   return (
@@ -25,11 +39,13 @@ export default function NavBar({ user, setUser }) {
           <span className="blue">i</span>d<span className="pink">i</span>
         </a>
       </div>
-      <div className="sideNavOpenButton" onClick={openSideNav}>
-        <div className="line1"></div>
-        <div></div>
-        <div className="line3"></div>
+      <div className="sideNavOpenButton" onClick={handleSideNavClick}>
+        <div className={!sideNavShown ? 'line1' : 'line1 active1'}></div>
+        <div className={!sideNavShown ? 'line2' : 'line2 active2'}></div>
+        <div className={!sideNavShown ? 'line3' : 'line3 active3'}></div>
       </div>
+      <div className="spacer"></div>
+      <div className={sideNavShown && 'overlay'}></div>
       <div className="sideNav">
         <NavLink
           to="/"
@@ -38,6 +54,9 @@ export default function NavBar({ user, setUser }) {
           activeClassName="active"
           onClick={closeSideNav}
         >
+          <span className="icon">
+            <House />
+          </span>
           Home
         </NavLink>
         <NavLink
@@ -46,6 +65,9 @@ export default function NavBar({ user, setUser }) {
           activeClassName="active"
           onClick={closeSideNav}
         >
+          <span className="icon">
+            <SongList />
+          </span>
           My Songs
         </NavLink>
         <div></div>
@@ -56,6 +78,9 @@ export default function NavBar({ user, setUser }) {
             activeClassName="active"
             onClick={handleLogOut}
           >
+            <span className="icon">
+              <Key />
+            </span>
             Log Out
           </NavLink>
         ) : (
@@ -65,6 +90,9 @@ export default function NavBar({ user, setUser }) {
             activeClassName="active"
             onClick={closeSideNav}
           >
+            <span className="icon">
+              <Key />
+            </span>
             Log In
           </NavLink>
         )}
