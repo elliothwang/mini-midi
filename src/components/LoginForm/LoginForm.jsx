@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-// TODO: fix auth, can compare it to rona rates's auth process;
 export default function LogIn({ setUser, setShowSignUp, handleAuthClick }) {
   const [credentials, setCredentials] = useState({
     email: '',

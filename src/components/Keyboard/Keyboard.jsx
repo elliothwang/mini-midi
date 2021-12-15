@@ -67,6 +67,7 @@ export default function Keyboard({ setNote, song, setSong, isRecording }) {
 
   function handleKeyDown(evt) {
     let keyCode = evt.keyCode;
+    // eslint-disable-next-line
     switch (keyCode) {
       case 65:
         handleWhiteKeyPress('C');
@@ -109,6 +110,7 @@ export default function Keyboard({ setNote, song, setSong, isRecording }) {
 
   function handleKeyUp(evt) {
     let keyCode = evt.keyCode;
+    // eslint-disable-next-line
     switch (keyCode) {
       case 65:
         handleWhiteKeyRelease('C');

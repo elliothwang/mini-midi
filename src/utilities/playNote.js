@@ -12,42 +12,43 @@ import G from '../assets/Notes/G.mp3';
 import GSharp from '../assets/Notes/GSharp.mp3';
 
 export default function playNote(note) {
+  // eslint-disable-next-line
   switch (note) {
-  case "C":
-    new Audio(C).play();
-    break;
-  case "CSharp":
-    new Audio(CSharp).play();
-    break;
-  case "D":
-    new Audio(D).play();
-    break;
-  case "DSharp":
-    new Audio(DSharp).play();
-    break;
-  case "E":
-    new Audio(E).play();
-    break;
-  case "F":
-    new Audio(F).play();
-    break;
-  case "FSharp":
-    new Audio(FSharp).play();
-    break;
-  case "G":
-    new Audio(G).play();
-    break;
-  case "GSharp":
-    new Audio(GSharp).play();
-    break;
-  case "A":
-    new Audio(A).play();
-    break;
-  case "ASharp":
-    new Audio(ASharp).play();
-    break;
-  case "B":
-    new Audio(B).play();
-    break;
+    case 'C':
+      new Audio(C).play();
+      break;
+    case 'CSharp':
+      new Audio(CSharp).play();
+      break;
+    case 'D':
+      new Audio(D).play();
+      break;
+    case 'DSharp':
+      new Audio(DSharp).play();
+      break;
+    case 'E':
+      new Audio(E).play();
+      break;
+    case 'F':
+      new Audio(F).play();
+      break;
+    case 'FSharp':
+      new Audio(FSharp).play();
+      break;
+    case 'G':
+      new Audio(G).play();
+      break;
+    case 'GSharp':
+      new Audio(GSharp).play();
+      break;
+    case 'A':
+      new Audio(A).play();
+      break;
+    case 'ASharp':
+      new Audio(ASharp).play();
+      break;
+    case 'B':
+      new Audio(B).play();
+      break;
   }
 }
