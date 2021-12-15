@@ -1,7 +1,7 @@
 import './NavBar.scss';
 import { useState } from 'react';
-import $ from 'jquery';
 import { NavLink } from 'react-router-dom';
+import $ from 'jquery';
 import { ReactComponent as House } from '../../assets/Icons/house.svg';
 import { ReactComponent as SongList } from '../../assets/Icons/song-list.svg';
 import { ReactComponent as Key } from '../../assets/Icons/key.svg';
@@ -46,7 +46,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       <div className={authShown ? 'popup' : 'none'}>
-        <AuthPopUp handleAuthClick={handleAuthClick} />
+        <AuthPopUp authShown={authShown} handleAuthClick={handleAuthClick} />
       </div>
       <div className="header">
         <a href="/">

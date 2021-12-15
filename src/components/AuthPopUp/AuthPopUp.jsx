@@ -2,11 +2,11 @@ import { useState } from 'react';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import LoginForm from '../LoginForm/LoginForm';
 
-export default function AuthPage({ setUser, handleAuthClick }) {
+export default function AuthPopUp({ authShown, setUser, handleAuthClick }) {
   const [showSignUp, setShowSignUp] = useState(true);
 
-  // document.body.onkeydown = null;
-  // document.body.onkeyup = null;
+  authShown && (document.body.onkeydown = null);
+  authShown && (document.body.onkeyup = null);
 
   return (
     <main className="popup">
