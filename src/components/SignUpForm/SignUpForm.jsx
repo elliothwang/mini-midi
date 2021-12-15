@@ -81,23 +81,26 @@ export default class SignUpForm extends Component {
               required
             />
             <button type="submit" disabled={disable}>
-              SIGN UP
+              Sign Up
             </button>
           </form>
+          <p className="error-message">&nbsp;{this.state.error}</p>
           <div
             className="flex-ctr-ctr"
             style={{
               fontSize: '2vmin',
-              paddingTop: '3vmin',
             }}
           >
             <div>Already a user?</div>
-            <button onClick={() => this.props.setShowSignUp(false)}>
-              Log In
-            </button>
+            <div
+              style={{ color: 'skyblue', cursor: 'pointer' }}
+              onClick={() => this.props.setShowSignUp(false)}
+            >
+              &nbsp;Log In
+            </div>
+            .
           </div>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );
   }

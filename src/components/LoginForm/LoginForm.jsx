@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
+// TODO: fix auth, can compare it to rona rates's auth process;
 export default function LogIn({ setUser, setShowSignUp, handleAuthClick }) {
   const [credentials, setCredentials] = useState({
     email: '',
@@ -46,19 +47,25 @@ export default function LogIn({ setUser, setShowSignUp, handleAuthClick }) {
             onChange={handleChange}
             required
           />
+          <button type="submit">Log In</button>
         </form>
+        <p className="error-message">&nbsp;{error}</p>
         <div
           className="flex-ctr-ctr"
           style={{
             fontSize: '2vmin',
-            paddingTop: '3vmin',
           }}
         >
           <div>New here?</div>
-          <button onClick={() => setShowSignUp(true)}>Sign Up</button>
+          <div
+            style={{ color: 'skyblue', cursor: 'pointer' }}
+            onClick={() => setShowSignUp(true)}
+          >
+            &nbsp;Sign Up
+          </div>
+          !
         </div>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }

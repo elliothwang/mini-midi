@@ -5,6 +5,9 @@ import LoginForm from '../LoginForm/LoginForm';
 export default function AuthPage({ setUser, handleAuthClick }) {
   const [showSignUp, setShowSignUp] = useState(true);
 
+  // document.body.onkeydown = null;
+  // document.body.onkeyup = null;
+
   return (
     <main className="popup">
       {showSignUp ? (

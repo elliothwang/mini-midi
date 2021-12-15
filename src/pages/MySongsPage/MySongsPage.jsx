@@ -21,6 +21,9 @@ export default function MySongsPage({ songs }) {
     setActiveSong(evt.target.value);
   }
 
+  document.body.onkeydown = null;
+  document.body.onkeyup = null;
+
   return (
     <div>
       <div className="songsPage">
